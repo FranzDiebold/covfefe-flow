@@ -1,0 +1,31 @@
+version: "3.4"
+
+services:
+  get-tweets:
+    build: ./get-tweets
+    volumes:
+      - tweets_data:/get_tweets/tweets
+    env_file:
+      - ./environment-variables.env
+
+  train-rnn:
+    build: ./train-rnn
+    ports:
+      - "8888:8888"
+      - "6006:6006"
+    volumes:
+      - tweets_data:/covfefe_flow/data
+      - model_data:/covfefe_flow/model
+    env_file:
+      - ./environment-variables.env
+
+  server-rnn:
+    build: ./serve-rnn
+    ports:
+      - 8000:8000
+    volumes:
+      - model_data:/src/todo
+
+volumes:
+  tweets_data:
+  model_data:
