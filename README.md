@@ -13,8 +13,9 @@
 ## Architecture
 
 ### Get tweets
-[Twitter API](https://developer.twitter.com/en/docs)
-[http://www.trumptwitterarchive.com/archive](http://www.trumptwitterarchive.com/archive)
+Possible sources:
+- [Twitter API](https://developer.twitter.com/en/docs)
+- [http://www.trumptwitterarchive.com/archive](http://www.trumptwitterarchive.com/archive)
 
 
 ### Train RNN
@@ -28,4 +29,4 @@ LSTM
 
 
 ## Deployment
-Using deployment shell scripts...
+Using [deployment shell scripts](./src/deployment)...
