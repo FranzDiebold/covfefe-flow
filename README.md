@@ -23,6 +23,21 @@ Using the machine learning framework [TensorFlow](https://www.tensorflow.org) an
 LSTM
 
 
+#### TensorBoard
+
+[TensorBoard](https://github.com/tensorflow/tensorboard) is used for visualizing the learning progress.
+It needs to be started within the Docker container:
+
+```bash
+docker exec -it src_train-rnn_1 bash
+```
+
+And in the container:
+```bash
+tensorboard --logdir "logs"
+```
+
+
 ### Serve RNN
 [TensorFlow Serving](https://www.tensorflow.org/serving/)?
 
