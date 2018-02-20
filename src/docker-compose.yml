@@ -15,7 +15,7 @@ services:
       - "6006:6006"
     volumes:
       - tweets_data:/covfefe_flow/data
-      - model_data:/covfefe_flow/model
+      - models_data:/covfefe_flow/models
     env_file:
       - ./environment-variables.env
 
@@ -24,8 +24,8 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - model_data:/src/todo
+      - models_data:/src/todo
 
 volumes:
   tweets_data:
-  model_data:
+  models_data:
