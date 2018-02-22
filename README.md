@@ -39,8 +39,15 @@ tensorboard --logdir "logs"
 ```
 
 
+### TensorFlow Serving
+[TensorFlow Serving](https://www.tensorflow.org/serving/)
+
+[epigramai/model-server]
+
+
+
 ### Serve RNN
-[TensorFlow Serving](https://www.tensorflow.org/serving/)?
+API
 
 
 
