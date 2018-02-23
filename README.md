@@ -3,6 +3,8 @@
 ![work: in progress](https://img.shields.io/badge/work-in_progress-blue.svg)
 [![license: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](./LICENSE.md)
 
+Donald Trump tweet generator 🤖
+
 <img src="./images/readme/cofveve-tweet_screenshot.jpg" width="60%" style="max-width:100%;" alt="covfefe tweet screenshot">
 
 > Despite the constant negative press covfefe
