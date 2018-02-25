@@ -49,7 +49,7 @@ tensorboard --logdir "logs"
 
 
 ### Serve RNN
-API
+JSON-API
 
 
 
