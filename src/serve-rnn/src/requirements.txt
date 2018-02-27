@@ -1,0 +1,3 @@
+git+https://git@github.com/epigramai/tfserving-python-predict-client.git
+gunicorn==19.7.1
+falcon==1.4.1
