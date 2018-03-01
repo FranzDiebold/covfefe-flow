@@ -18,7 +18,7 @@ Donald Trump tweet generator 🤖
 ### Get tweets
 Possible sources:
 - [Twitter API](https://developer.twitter.com/en/docs)
-- [http://www.trumptwitterarchive.com/archive](http://www.trumptwitterarchive.com/archive)
+- [http://www.trumptwitterarchive.com/archive](http://www.trumptwitterarchive.com/archive) without `retweets` and `manual retweets`, only `Text`
 
 
 ### Train RNN
