@@ -25,11 +25,11 @@ class TweetAutocompleterResource(object):
         tweet_autocompleter = TweetAutocompleter(BEGINNING_OF_TWEET_LENGTH, 1.0,
                                                  TENSORFLOW_SERVING_HOST, TENSORFLOW_SERVING_PORT,
                                                  TENSORFLOW_SERVING_MODEL_NAME, TENSORFLOW_SERVING_MODEL_VERSION)
-        complete_tweet = tweet_autocompleter.autocomplete(beginning_of_tweet)
+        generated_tweet = tweet_autocompleter.autocomplete(beginning_of_tweet)
 
         response_body = {
             'beginning_of_tweet': beginning_of_tweet,
-            'complete_tweet': complete_tweet
+            'generated_tweet': generated_tweet
         }
         resp.body = json.dumps(response_body)
 
