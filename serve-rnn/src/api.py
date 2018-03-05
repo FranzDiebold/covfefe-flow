@@ -1,3 +1,4 @@
+from datetime import datetime
 import json
 
 import falcon
@@ -29,7 +30,8 @@ class TweetAutocompleterResource(object):
 
         response_body = {
             'beginning_of_tweet': beginning_of_tweet,
-            'generated_tweet': generated_tweet
+            'generated_tweet': generated_tweet,
+            'timestamp': datetime.now().isoformat()
         }
         resp.body = json.dumps(response_body)
 
