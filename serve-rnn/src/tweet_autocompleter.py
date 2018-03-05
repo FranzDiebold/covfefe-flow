@@ -6,6 +6,8 @@ from util import get_vocabulary_and_dictionaries, sample
 
 IN_TENSOR_NAME = 'inputs'
 IN_TENSOR_DTYPE = 'DT_FLOAT'
+END_OF_TWEET = '\n'
+TWEET_MAX_LEN = 280
 
 
 class TweetAutocompleter(object):
@@ -20,8 +22,11 @@ class TweetAutocompleter(object):
     def autocomplete(self, beginning_of_tweet: str) -> str:
         complete_tweet = beginning_of_tweet
         input_sentence = beginning_of_tweet
-        for i in range(20):
+        for i in range(TWEET_MAX_LEN - self.input_len):
             next_char = self._predict_next_char(input_sentence)
+            if next_char == END_OF_TWEET:
+                break
+
             complete_tweet += next_char
             input_sentence = input_sentence[1:] + next_char
         return complete_tweet
