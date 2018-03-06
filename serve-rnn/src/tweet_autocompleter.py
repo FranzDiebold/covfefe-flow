@@ -11,8 +11,10 @@ TWEET_MAX_LEN = 280
 
 
 class TweetAutocompleter(object):
-    def __init__(self, input_len: int, diversity: float, host: str, port: int, model_name: str, model_version: int):
-        self.input_len = input_len
+    def __init__(self, max_input_len: int,
+                 diversity: float,
+                 host: str, port: int, model_name: str, model_version: int):
+        self.max_input_len = max_input_len
         self.diversity = diversity
 
         self.client = ProdClient('{host}:{port}'.format(host=host, port=port), model_name, model_version)
@@ -22,7 +24,7 @@ class TweetAutocompleter(object):
     def autocomplete(self, beginning_of_tweet: str) -> str:
         complete_tweet = beginning_of_tweet
         input_sentence = beginning_of_tweet
-        for i in range(TWEET_MAX_LEN - self.input_len):
+        for i in range(TWEET_MAX_LEN - len(beginning_of_tweet)):
             next_char = self._predict_next_char(input_sentence)
             if next_char == END_OF_TWEET:
                 break
@@ -32,7 +34,7 @@ class TweetAutocompleter(object):
         return complete_tweet
 
     def _predict_next_char(self, input_sentence: str) -> str:
-        input_data = np.zeros((1, self.input_len, self.vocabulary_size))
+        input_data = np.zeros((1, self.max_input_len, self.vocabulary_size))
         for t, char in enumerate(input_sentence):
             input_data[0, t, self.char_to_id[char]] = 1.0
         request_data = [{
