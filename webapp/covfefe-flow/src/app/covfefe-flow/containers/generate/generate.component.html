@@ -1,14 +1,18 @@
 <div class="hero is-medium fill-to-full-height">
   <div class="hero-body">
     <div class="container has-text-centered input-container">
-      <input type="text" class="input" placeholder="Type beginning of tweet..." autofocus="autofocus"
-        [size]="beginningOfTweetMaxLength"
-        [maxlength]="beginningOfTweetMaxLength"
-        [formControl]="beginningOfTweet">
+      <div>
+        <input type="text" class="input" placeholder="Type beginning of tweet..." autofocus="autofocus"
+          [size]="beginningOfTweetMaxLength"
+          [maxlength]="beginningOfTweetMaxLength"
+          [formControl]="beginningOfTweet">
+      </div>
+
       <div *ngIf="beginningOfTweet.invalid" class="invalid-input">
         Only the following characters are allowed:<br>
         {{ inputPattern }}
       </div>
+
       <div *ngIf="beginningOfTweet.valid && beginningOfTweet.value" class="regenerate-button-container">
         <a class="button is-rounded tooltip is-tooltip-bottom" data-tooltip="regenerate tweet"
           (click)="regenerateTweet()">
@@ -25,11 +29,13 @@
             <span class="loader"></span>
           </div>
         </div>
+
         <div *ngIf="errorMessage" class="error-message-container has-text-centered">
           <div class="notification is-danger">
             {{ errorMessage }}
           </div>
         </div>
+
         <app-tweet *ngFor="let generatedTweet of generatedTweets"
           [text]="generatedTweet.generated_tweet"
           [timestamp]="generatedTweet.timestamp"
