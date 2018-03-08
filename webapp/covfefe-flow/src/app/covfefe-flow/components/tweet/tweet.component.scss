@@ -1,0 +1,131 @@
+@import "../../../../variables";
+
+$gray: #737374;
+
+.tweet {
+    padding: 1.5rem 2.1rem;
+    margin-bottom: 2.5rem;
+    border-radius: 5px;
+    background-color: #ffffff;
+    text-align: left;
+    box-shadow: 0px 0px 0.3rem #cccccc;
+
+    @include mobile {
+        padding: 1.2rem 1.7rem;
+        border-radius: 4px;
+    }
+
+    .tweet-header {
+        margin-bottom: 0;
+
+        img.avatar {
+            $avatar-size: 3rem;
+            width: $avatar-size;
+            height: $avatar-size;
+            border-radius: 50%;
+
+            @include mobile {
+                $avatar-size-mobile: 2.4rem;
+                width: $avatar-size-mobile;
+                height: $avatar-size-mobile;
+            }
+        }
+
+        .fullname {
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 1.2;
+
+            @include mobile {
+                font-size: 1rem;
+            }
+
+            svg.fake-icon {
+                width: 0.7em;
+                height: 0.7em;
+            }
+        }
+
+        .username {
+            font-size: 0.85rem;
+            color: $gray;
+
+            @include mobile {
+                font-size: 0.75rem;
+            }
+        }
+
+        .tweet-button {
+            font-size: 0.9rem;
+            color: $color-primary;
+            border-color: $color-primary;
+
+            @include mobile {
+                font-size: 0.8rem;
+            }
+
+            &:hover {
+                background-color: rgba($color-primary, 0.1);
+            }
+        }
+    }
+
+    .tweet-content {
+        font-size: 1.8rem;
+        word-wrap: break-word;
+        padding-bottom: 0.8rem;
+
+        @include mobile {
+            font-size: 1.4rem;
+        }
+    }
+
+    .tweet-info {
+        font-size: 0.9rem;
+        color: $gray;
+        padding-bottom: 1rem;
+
+        @include mobile {
+            font-size: 0.8rem;
+        }
+    }
+
+    .tweet-actions {
+        a {
+            display: inline-flex;
+            align-items: center;
+            color: $gray;
+            font-size: 0.85rem;
+            line-height: 0.85rem;
+
+            @include mobile {
+                font-size: 0.75rem;
+                line-height: 0.75rem;
+            }
+
+            &:not(:last-child) {
+                margin-right: 1.65rem;
+            }
+
+            &.reply:hover {
+                color: $color-primary;
+            }
+
+            &.retweet:hover {
+                color: $color-secondary;
+            }
+
+            &.like:hover {
+                color: $color-tertiary;
+            }
+
+            svg {
+                $action-icon-size: 1rem;
+                width: $action-icon-size;
+                height: $action-icon-size;
+                fill: currentColor;
+                margin-right: 0.4rem;
+            }
+        }
+    }
+}
