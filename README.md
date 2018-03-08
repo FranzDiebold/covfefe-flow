@@ -1,15 +1,16 @@
+<img src="./design/logo/covfefe-flow-logo.png" alt="covfefe-flow logo" style="max-width:100%;" width="400px" height="70px">
+
 # covfefe-flow
 
 ![work: in progress](https://img.shields.io/badge/work-in_progress-blue.svg)
 [![license: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](./LICENSE.md)
 
-Donald Trump tweet generator 🤖
+covfefe-flow is a @realDonaldTrump :triumph: fake tweet generator 🤖.
 
-<img src="./images/readme/cofveve-tweet_screenshot.jpg" width="60%" style="max-width:100%;" alt="covfefe tweet screenshot">
+<img src="./images/readme/cofveve-tweet_screenshot.jpg" width="60%" style="max-width:100%;" width="450px" height="216px" alt="covfefe tweet screenshot">
+[original (deleted) tweet](https://archive.is/f7UL3)
 
 > Despite the constant negative press covfefe
-
-[original (deleted) tweet](https://archive.is/f7UL3)
 
 
 
@@ -49,12 +50,12 @@ tensorboard --logdir "logs"
 
 
 ### Serve RNN
-JSON-API
+JSON-API using the Python web API framework [Falcon](https://github.com/falconry/falcon)
 
 
 
 ### Webapp
-Coming soon!
+[Angular](https://github.com/angular/angular) and [Bulma](https://github.com/jgthms/bulma)
 
 
 
