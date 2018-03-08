@@ -7,7 +7,7 @@
 
 covfefe-flow is a @realDonaldTrump :triumph: fake tweet generator 🤖.
 
-<img src="./images/readme/cofveve-tweet_screenshot.jpg" width="60%" style="max-width:100%;" width="450px" height="216px" alt="covfefe tweet screenshot">
+<img src="./images/readme/cofveve-tweet_screenshot.jpg" style="max-width:100%;" width="450px" height="216px" alt="covfefe tweet screenshot">
 [original (deleted) tweet](https://archive.is/f7UL3)
 
 > Despite the constant negative press covfefe
