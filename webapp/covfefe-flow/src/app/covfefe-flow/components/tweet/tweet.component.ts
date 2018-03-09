@@ -1,5 +1,8 @@
 import { Component, Input } from '@angular/core';
 
+import { environment } from '../../../../environments/environment';
+
+
 @Component({
   selector: 'app-tweet',
   templateUrl: './tweet.component.html',
@@ -12,6 +15,6 @@ export class TweetComponent {
   @Input() username: string;
 
   get tweetLink(): string {
-    return 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(this.text);
+    return 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(this.text) + '&via=' + environment.twitterUsername;
   }
 }
