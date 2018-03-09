@@ -73,7 +73,10 @@ export class GenerateComponent implements OnInit {
             },
             (error: any) => {
               this.isLoading = false;
-              this.errorMessage = error.message;
+              this.errorMessage = error.statusText;
+              if (error.error.description) {
+                this.errorMessage += ' (' + error.error.description + ')';
+              }
             }
           );
         }
