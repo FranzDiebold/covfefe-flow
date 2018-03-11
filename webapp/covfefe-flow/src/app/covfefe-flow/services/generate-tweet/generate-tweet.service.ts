@@ -15,6 +15,7 @@ export class GenerateTweetService {
   loadGeneratedTweet(beginningOfTweet: string): Observable<GenerateTweetResponse> {
     const body: string = new HttpParams()
       .set('beginning_of_tweet', beginningOfTweet)
+      .set('temperature', '0.9')
       .toString();
     const headers = new HttpHeaders()
       .set('Content-Type', 'application/x-www-form-urlencoded');
