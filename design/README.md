@@ -2,7 +2,7 @@
 
 # Design
 
-## Colors
+## :art: Colors
 
 - primary color ![#009df4](https://placehold.it/20/009df4/000000?text=+) `#009df4`
 - secondary color ![#00f457](https://placehold.it/20/00f457/000000?text=+) `#00f457`
@@ -18,7 +18,7 @@ The logo font is `Avenir Next`.
 
 
 
-## Icon
+## :thumbsup: Icon
 
 <img src="./logo/covfefe-flow-icon.png" alt="covfefe-flow icon"  style="max-width:100%;" width="250px" height="250px">
 
