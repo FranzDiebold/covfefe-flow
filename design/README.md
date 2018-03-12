@@ -26,6 +26,6 @@ The logo font is `Avenir Next`.
 
 ## Preview image for social networks
 
-![covfefe-flow preview image](./other/covfefe-flow-preview-image.png)
+![covfefe-flow preview image](other/covfefe-flow-preview-image.png)
 
 Source of the background image: [Unsplash.com](https://unsplash.com/photos/igCBFrMd11I) ([License](https://unsplash.com/license))
