@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  apiEndpoint: 'http://192.168.99.100',
+  apiEndpoint: 'https://api.covfefe-flow.ml',
   beginningOfTweetMaxLength: 35,
   twitterUsername: 'covfefeflow'
 };
