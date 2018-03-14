@@ -18,6 +18,7 @@ covfefe-flow is a @realDonaldTrump :triumph: fake tweet generator 🤖.
 :fast_forward: [Get Tweets](./get-tweets) - Get @realDonaldTrump tweets for training
 
 
+
 ## :running: Train
 :fast_forward: [Train](./train) - Train the recurrent neural net (RNN)
 
