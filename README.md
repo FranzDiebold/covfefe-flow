@@ -14,9 +14,7 @@ covfefe-flow is a @realDonaldTrump :triumph: fake tweet generator 🤖.
 
 
 
-## Architecture
-
-### Get Tweets
+## Get Tweets
 :fast_forward: [Get Tweets](./get-tweets) - Get @realDonaldTrump tweets for training
 
 
