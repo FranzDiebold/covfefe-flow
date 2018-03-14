@@ -16,52 +16,39 @@ covfefe-flow is a @realDonaldTrump :triumph: fake tweet generator 🤖.
 
 ## Architecture
 
-### Get tweets
-Possible sources:
-- [Twitter API](https://developer.twitter.com/en/docs)
-- [http://www.trumptwitterarchive.com/archive](http://www.trumptwitterarchive.com/archive) without `retweets` and `manual retweets`, only `Text`
+### Get Tweets
+:fast_forward: [Get Tweets](./get-tweets) - Get @realDonaldTrump tweets for training
 
 
-### Train RNN
-Using the machine learning framework [TensorFlow](https://www.tensorflow.org) and the Python Deep Learning library [Keras](https://keras.io).
-LSTM
-
-
-#### TensorBoard
-
-[TensorBoard](https://github.com/tensorflow/tensorboard) is used for visualizing the learning progress.
-It needs to be started within the Docker container:
-
-```bash
-docker exec -it src_train-rnn_1 bash
-```
-
-And in the container:
-```bash
-tensorboard --logdir "logs"
-```
-
-
-### TensorFlow Serving
-[TensorFlow Serving](https://www.tensorflow.org/serving/)
-
-[epigramai/model-server]
+## :running: Train
+:fast_forward: [Train](./train) - Train the recurrent neural net (RNN)
 
 
 
-### Serve RNN
-JSON-API using the Python web API framework [Falcon](https://github.com/falconry/falcon)
+## TensorFlow Serving
+:fast_forward: [TensorFlow Serving](./tensorflow-serving) - Deploy and serve the RNN model
 
 
 
-### Webapp
-[Angular](https://github.com/angular/angular) and [Bulma](https://github.com/jgthms/bulma)
+## :computer: API
+:fast_forward: [API](./api) - JSON-API for fake tweet creation
 
 
 
-### Chatbot
+## :iphone: Webapp
+:fast_forward: [Webapp](./webapp) - Angular webapp for fake tweet creation
+
+
+
+## :speech_balloon: Chatbot
 - [ ] TODO
 
 
-## Deployment
-Using [deployment shell scripts](./src/deployment)...
+
+## :house: Architecture & :rocket: Deployment
+:fast_forward: [Architecture & Deployment](./deployment) - Architecture and deployment scripts
+
+
+
+## :art: Design
+:fast_forward: [Design](./design) - Colors and logo

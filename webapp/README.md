@@ -1,7 +1,7 @@
 <img src="../design/logo/covfefe-flow-logo.png" alt="covfefe-flow logo" style="max-width:100%;" width="400px" height="70px">
 
 
-# Webapp
+# :iphone: Webapp
 
 [![Angular: v5](https://img.shields.io/badge/Angular-v5-DD0031.svg)](./covfefe-flow/package.json)
 <a href="https://www.covfefe-flow.ml" target="_blank"><img src="https://img.shields.io/badge/demo-online-009df4.svg" alt="demo: online"></a>
@@ -20,7 +20,7 @@ Angular concepts/techniques used:
 ## Main components
 
 ### generate
-The actual fake tweet generation view.
+The actual fake tweet creation view.
 
 ### about
 User-centric description of the covfefe-flow project.

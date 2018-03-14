@@ -1,6 +1,6 @@
 <img src="../design/logo/covfefe-flow-logo.png" alt="covfefe-flow logo" style="max-width:100%;" width="400px" height="70px">
 
-# Deployment
+# :house: Architecture & :rocket: Deployment
 
 ## :house: Architecture
 
@@ -47,4 +47,9 @@ In the [AWS console](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1
 ### External
 
 #### [Let’s Encrypt](https://letsencrypt.org)
-The SSL certificate used for covfefe-flow is issued by [Let’s Encrypt](https://letsencrypt.org) and thus free! It was generated using the [certbot/certbot](https://hub.docker.com/r/certbot/certbot/) Docker image.
+The SSL certificate used for covfefe-flow is issued by [Let’s Encrypt](https://letsencrypt.org) and thus free! It was generated using the official [certbot/certbot](https://hub.docker.com/r/certbot/certbot/) Docker image.
+
+
+
+## :rocket: Deployment
+...
