@@ -16,14 +16,16 @@ Generate a fake tweet with a given beginning.
 
 `POST` `https://api.covfefe-flow.ml/` with a `x-www-form-urlencoded` body containing the following parameters:
 - `beginning_of_tweet`: The beginning of the tweet, up to 35 characters long.
-- `temperature` (optional): Float value in the interval (0.0, 1.2].
+- `temperature` (optional): Float value in the interval (0.0, 1.2] to control the randomness of predictions.
 
 
 **Response**
 :
 ```json
 {
-    ...
+    "beginning_of_tweet": "...",
+    "generated_tweet": "... ...",
+    "timestamp": "2018-03-14T01:59:26.535897"
 }
 ```
 
