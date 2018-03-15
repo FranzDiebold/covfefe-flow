@@ -4,36 +4,52 @@ services:
   get-tweets:
     build: "./get-tweets"
     volumes:
-      - "tweets_data:/get_tweets/tweets"
+      - "tweets_data:/get_tweets/tweets/"
     env_file:
       - environment-variables.env
 
-  train-rnn:
-    build: "./train-rnn"
+  train:
+    build: "./train"
     ports:
       - "8888:8888"
       - "6006:6006"
     volumes:
-      - "tweets_data:/covfefe_flow/data"
-      - "models_data:/covfefe_flow/models"
+      - "tweets_data:/covfefe_flow/data/"
+      - "models_data:/covfefe_flow/models/"
     env_file:
       - environment-variables.env
 
   tensorflow-serving:
     image: "epigramai/model-server:light-1.5"
-    ports:
-      - "9000:9000"
     volumes:
       - "models_data:/models/"
-    command: ["--port=9000", "--model_name=covfefe-flow", "--model_base_path=/models/covfefe-flow"]
+    command: ["--port=9000", "--model_name=covfefe-flow", "--model_base_path=/models/covfefe-flow/"]
 
-  serve-rnn:
-    build: "./serve-rnn"
-    ports:
-      - "80:80"
+  api:
+    build: "./api"
     depends_on:
       - "tensorflow-serving"
+
+  webapp:
+    build: ./webapp
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "certificates_data:/etc/ssl/:ro"
+    depends_on:
+      - api
+
+  letsencrypt-certbot:
+    image: "certbot/certbot:latest"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "certificates_data:/etc/letsencrypt/"
+    command: "certonly -n --standalone -m covfefe.flow@gmail.com --agree-tos --no-eff-email -d covfefe-flow.ml -d www.covfefe-flow.ml -d api.covfefe-flow.ml -d chatbot.covfefe-flow.ml"
 
 volumes:
   tweets_data:
   models_data:
+  certificates_data:
