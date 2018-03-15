@@ -2,12 +2,15 @@
 
 # :running: Train
 
-Using the machine learning framework [TensorFlow](https://www.tensorflow.org) and the Python Deep Learning library [Keras](https://keras.io).
+Build and train the recurrent neural network (RNN) using the machine learning framework [TensorFlow](https://www.tensorflow.org) and the Python Deep Learning library [Keras](https://keras.io).
+For visualization the Python visualization library [seaborn](https://seaborn.pydata.org) is used.
 
-- [LSTM](https://keras.io/layers/recurrent/#lstm)
+- [LSTM](https://keras.io/layers/recurrent/#lstm): Long short-term memory
 - [ReduceLROnPlateau](https://keras.io/callbacks/#reducelronplateau): really great way to adjust (reduce) the learning rate when the validation loss stops improving
 - Regularization: to counteract overfitting
 - Dropout: to counteract overfitting
+
+The respective [Jupyter](http://jupyter.org) notebook can be found in [src/train-covfefe-flow.ipynb](src/train-covfefe-flow.ipynb).
 
 
 ### :chart_with_downwards_trend: TensorBoard
@@ -25,6 +28,11 @@ tensorboard --logdir "logs"
 
 
 
-## :rocket: Deployment
-The official Python v3 [`tensorflow/tensorflow`](https://hub.docker.com/r/tensorflow/tensorflow/) Docker image is used (see [Dockerfile](./Dockerfile)).
-Furthermore, [Keras](https://keras.io) and [seaborn](https://seaborn.pydata.org) are installed (see [src/requirements.txt](./src/requirements.txt)).
+## :rocket: Deployment & Usage
+The official Python v3 [`tensorflow/tensorflow`](https://hub.docker.com/r/tensorflow/tensorflow/) Docker image is used (see [Dockerfile](./Dockerfile)), which runs [Jupyter](http://jupyter.org).
+
+After starting the Docker container the Jupyter Notebook is running at:
+
+[`http://192.168.99.100:8888/?token=<JUPYTER_TOKEN>`](http://192.168.99.100:8888/?token=<JUPYTER_TOKEN>)
+
+(assuming that your Docker machine is listening at `192.168.99.100`)
