@@ -5,9 +5,9 @@
 Using the machine learning framework [TensorFlow](https://www.tensorflow.org) and the Python Deep Learning library [Keras](https://keras.io).
 
 - [LSTM](https://keras.io/layers/recurrent/#lstm)
-- [ReduceLROnPlateau](https://keras.io/callbacks/#reducelronplateau)
-- Regularization
-- Dropout
+- [ReduceLROnPlateau](https://keras.io/callbacks/#reducelronplateau): really great way to adjust (reduce) the learning rate when the validation loss stops improving
+- Regularization: to counteract overfitting
+- Dropout: to counteract overfitting
 
 
 ### :chart_with_downwards_trend: TensorBoard
@@ -22,3 +22,9 @@ And in the container:
 ```bash
 tensorboard --logdir "logs"
 ```
+
+
+
+## :rocket: Deployment
+The official Python v3 [`tensorflow/tensorflow`](https://hub.docker.com/r/tensorflow/tensorflow/) Docker image is used (see [Dockerfile](./Dockerfile)).
+Furthermore, [Keras](https://keras.io) and [seaborn](https://seaborn.pydata.org) are installed (see [src/requirements.txt](./src/requirements.txt)).
