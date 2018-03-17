@@ -8,7 +8,9 @@ The Python visualization library [seaborn](https://seaborn.pydata.org) is used f
 
 ## Procedure
 
-The respective [Jupyter](http://jupyter.org) notebook with documentation can be found in [src/train-covfefe-flow.ipynb](src/train-covfefe-flow.ipynb).
+The respective [Jupyter](http://jupyter.org) notebook with documentation can be found in
+
+:fast_forward: [src/train-covfefe-flow.ipynb](src/train-covfefe-flow.ipynb).
 
 
 
