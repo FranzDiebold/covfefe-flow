@@ -26,6 +26,8 @@ services:
     build: "./api"
     depends_on:
       - tensorflow-serving
+    env_file:
+      - environment-variables.env
 
   webapp:
     build: ./webapp
