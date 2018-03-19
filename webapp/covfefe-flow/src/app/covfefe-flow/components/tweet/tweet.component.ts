@@ -13,6 +13,9 @@ export class TweetComponent {
   @Input() timestamp: Date;
   @Input() fullname: string;
   @Input() username: string;
+  @Input() numberOfReplies: number;
+  @Input() numberOfRetweets: number;
+  @Input() numberOfLikes: number;
 
   get tweetLink(): string {
     return 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(this.text) + '&via=' + environment.twitterUsername;

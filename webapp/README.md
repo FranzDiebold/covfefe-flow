@@ -51,8 +51,15 @@ $color-error: $color-tertiary;
 ```
 
 
-## Local test
-Test the app locally:
+
+## :pray: Tests
+For running the tests:
+```bash
+npm install
+ng test
+```
+
+Or just testing the app locally:
 
 Serve app locally
 ```bash

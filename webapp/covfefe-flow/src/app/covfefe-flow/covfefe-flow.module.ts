@@ -10,6 +10,7 @@ import { LegalComponent } from './containers/legal/legal.component';
 import { PrivacyStatementComponent } from './containers/privacy-statement/privacy-statement.component';
 import { GenerateTweetService } from './services/generate-tweet/generate-tweet.service';
 import { TweetComponent } from './components/tweet/tweet.component';
+import { BeautifyNumberPipe } from './pipes/beautify-number/beautify-number.pipe';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { TweetComponent } from './components/tweet/tweet.component';
     LegalComponent,
     PrivacyStatementComponent,
     TweetComponent,
+    BeautifyNumberPipe,
   ],
   providers: [
     GenerateTweetService,

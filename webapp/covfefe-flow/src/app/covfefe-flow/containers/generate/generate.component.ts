@@ -69,6 +69,9 @@ export class GenerateComponent implements OnInit {
           this.generateTweetService.loadGeneratedTweet(beginningOfTweet).subscribe(
             (generateTweetResponse: GenerateTweetResponse) => {
               this.isLoading = false;
+              generateTweetResponse.number_of_replies = this.getRandomNumber();
+              generateTweetResponse.number_of_retweets = this.getRandomNumber();
+              generateTweetResponse.number_of_likes = this.getRandomNumber();
               this.generatedTweets.unshift(generateTweetResponse);
             },
             (error: any) => {
@@ -94,5 +97,9 @@ export class GenerateComponent implements OnInit {
 
   regenerateTweet(): void {
     this.regenerateTweet$.next();
+  }
+
+  private getRandomNumber(): number {
+    return Math.floor(Math.random() * 2000000);
   }
 }
