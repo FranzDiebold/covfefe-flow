@@ -20,10 +20,7 @@ services:
       - environment-variables.env
 
   tensorflow-serving:
-    image: "epigramai/model-server:light-1.5"
-    volumes:
-      - "models_data:/models/"
-    command: ["--port=9000", "--model_name=covfefe-flow", "--model_base_path=/models/covfefe-flow/"]
+    build: "./tensorflow-serving"
 
   api:
     build: "./api"
