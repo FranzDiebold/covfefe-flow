@@ -2,10 +2,10 @@
 
 # covfefe-flow
 
-![work: in progress](https://img.shields.io/badge/work-in_progress-blue.svg)
+[![demo: online](https://img.shields.io/badge/demo-online-009df4.svg)](https://www.covfefe-flow.ml)
 [![license: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](./LICENSE.md)
 
-covfefe-flow is a @realDonaldTrump :triumph: fake tweet generator 🤖.
+*covfefe-flow* is a @realDonaldTrump :triumph: fake tweet generator 🤖.
 
 <img src="./images/readme/cofveve-tweet_screenshot.jpg" style="max-width:100%;" width="450px" height="216px" alt="covfefe tweet screenshot">
 [original (deleted) tweet](https://archive.is/f7UL3)
@@ -45,6 +45,8 @@ covfefe-flow is a @realDonaldTrump :triumph: fake tweet generator 🤖.
 
 
 ## :house: Architecture & :rocket: Deployment
+<img src="./deployment/images/readme/covfefe-flow_architecture.jpg" width="40%" style="max-width:100%;" alt="covfefe-flow architecture">
+
 :fast_forward: [Architecture & Deployment](./deployment) - Architecture and deployment scripts
 
 
