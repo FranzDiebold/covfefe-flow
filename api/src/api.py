@@ -8,7 +8,7 @@ from falcon.errors import HTTPInvalidParam
 from tweet_autocompleter import TweetAutocompleter
 
 
-BEGINNING_OF_TWEET_MAX_LENGTH = int(os.environ.get('BEGINNING_OF_TWEET_MAX_LENGTH', 35))
+BEGINNING_OF_TWEET_MAX_LENGTH = int(os.environ.get('BEGINNING_OF_TWEET_MAX_LENGTH', 40))
 TENSORFLOW_SERVING_HOST = os.environ.get('TENSORFLOW_SERVING_HOST', 'tensorflow-serving')
 TENSORFLOW_SERVING_PORT = int(os.environ.get('TENSORFLOW_SERVING_PORT', 9000))
 TENSORFLOW_SERVING_MODEL_NAME = os.environ.get('TENSORFLOW_SERVING_MODEL_NAME', 'covfefe-flow')
