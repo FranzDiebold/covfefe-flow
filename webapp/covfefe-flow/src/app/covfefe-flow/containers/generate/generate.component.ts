@@ -48,7 +48,7 @@ export class GenerateComponent implements OnInit {
         filter((beginningOfTweetValueValidity: ValueValidity) => beginningOfTweetValueValidity.isValid),
         map((beginningOfTweetValueValidity: ValueValidity) => beginningOfTweetValueValidity.value),
         filter((beginningOfTweetValue: string) => (beginningOfTweetValue.length > 0)),
-        debounceTime(500)
+        debounceTime(750)
       );
 
     const generateTweetDueToRegenerate$: Observable<string> = this.regenerateTweet$.pipe(
