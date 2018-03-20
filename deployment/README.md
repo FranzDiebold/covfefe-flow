@@ -6,7 +6,7 @@
 
 The architecture and interplay of components and (external) services is illustrated in the following image:
 
-<img src="./images/readme/covfefe-flow-architecture.jpg" width="90%" style="max-width:100%;" alt="covfefe-flow architecture">
+![covfefe-flow architecture](./images/readme/covfefe-flow_architecture.jpg)
 
 ### Internal
 
@@ -49,6 +49,18 @@ In the [AWS console](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1
 #### [Let’s Encrypt](https://letsencrypt.org)
 The SSL certificate used for covfefe-flow is issued by [Let’s Encrypt](https://letsencrypt.org) and thus free! It was generated using the official [certbot/certbot](https://hub.docker.com/r/certbot/certbot/) Docker image.
 
+
+
+#### [Cloudflare](https://www.cloudflare.com)
+In order to speed up performance the reverse proxy and content delivery network (CDN) services by Cloudflare are used. However, it is only used for the static content via the `www` subdomain.
+The API traffic via the `api` subdomain is directly routed to the AWS EC2 instance.
+The following DNS settings should be used.
+
+<img src="./images/readme/cloudflare_dns_settings.jpg" width="600px" height="170px" style="max-width:100%;" alt="Cloudflare DNS settings">
+
+The IP of the AWS EC2 instance can be obtained from the [AWS console](https://console.aws.amazon.com/ec2/v2/home).
+
+Moreover, the nameservers at the domain registrar need to be changed to ones from Cloudflare.
 
 
 ## :rocket: Deployment
