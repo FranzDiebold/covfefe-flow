@@ -64,4 +64,49 @@ Moreover, the nameservers at the domain registrar need to be changed to ones fro
 
 
 ## :rocket: Deployment
-...
+The deployment process is simplified and automated by using several shell scripts. These scripts must be run from the root folder.
+
+### :clapper: Preparations
+
+The following preparations must be completed before deploying the application:
+- In [`deployment/aws_credentials.txt`](./aws_credentials.txt) enter your AWS `ACCESS_KEY`, `SECRET_KEY` and `VPC_ID` ([Managing Access Keys for IAM Users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)).
+
+
+#### Build and set Docker Machines
+The local Docker Machine is for getting the tweets and training. The AWS Docker Machine is for hosting the app.
+```bash
+sh deployment/0_1_build_docker_machine_local.sh
+sh deployment/0_2_build_docker_machine_aws.sh
+eval $(docker-machine env covfefe-flow)
+sh deployment/1_2_set_docker_machine_aws.sh
+```
+
+
+#### Get certificates
+```bash
+sh deployment/8_get_certificates.sh
+```
+
+
+#### Build services
+```bash
+sh deployment/<SERVICE_NUMBER>_start_<SERVICE_NAME>.sh
+```
+
+
+#### :mag: Inspect containers
+```bash
+docker-compose run --rm <CONTAINER_NAME> bash
+```
+
+
+#### Checking logs
+```bash
+docker-compose logs
+docker-compose logs <CONTAINER_NAME>
+```
+
+
+
+## :ballot_box_with_check:️ TODOs
+- [ ] Use [Docker Cloud](https://cloud.docker.com) on AWS
