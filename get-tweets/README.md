@@ -18,5 +18,5 @@ Since @realDonaldTrump has more than 30,000 Tweets this method is not suitable :
 ![trumptwitterarchive.com screenshot](./images/readme/trumptwitterarchive.com_screenshot.jpg)
 
 [trumptwitterarchive.com](http://www.trumptwitterarchive.com/archive) lets you download a list of *all* tweets from @realDonaldTrump as CSV.
-Since we don't need any metadata like `Tweet id`, `timestamp`, `#favorites`, `#retweets` you should only export the pure `Text`.
+Since we don't need any metadata like `Tweet id`, `timestamp`, `#favorites`, `#retweets` you should only export the pure `Text` without the `,` separator.
 The archive also contains `retweets` and `manual retweets`. As they do not reflect @realDonaldTrump's style of writing, you should also filter out these Tweets via `Options`.
