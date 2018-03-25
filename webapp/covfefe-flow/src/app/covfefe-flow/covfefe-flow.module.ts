@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { LinkyModule } from 'angular-linky';
+
 import { CovfefeFlowRoutingModule } from './covfefe-flow-routing.module';
 import { GenerateComponent } from './containers/generate/generate.component';
 import { AboutComponent } from './containers/about/about.component';
@@ -18,6 +20,8 @@ import { BeautifyNumberPipe } from './pipes/beautify-number/beautify-number.pipe
     CommonModule,
     HttpClientModule,
     ReactiveFormsModule,
+
+    LinkyModule,
 
     CovfefeFlowRoutingModule,
   ],

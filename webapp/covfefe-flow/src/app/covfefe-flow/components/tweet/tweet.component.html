@@ -46,8 +46,7 @@
             <a [href]="tweetLink" target="_blank" class="button is-rounded tweet-button">Tweet</a>
         </div>
     </div>
-    <div class="tweet-content">
-        {{ text }}
+    <div class="tweet-content" [innerHTML]="text | linky:{ newWindow: true, urls: true, email: false, phone: false, mention: 'twitter', hashtag: 'twitter' }">
     </div>
     <div class="tweet-info">
         {{ timestamp | date:'h:mm a - d LLL yyyy' }}

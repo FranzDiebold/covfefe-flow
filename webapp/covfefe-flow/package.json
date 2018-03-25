@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^5.2.9",
     "@angular/platform-browser-dynamic": "^5.2.9",
     "@angular/router": "^5.2.9",
+    "angular-linky": "^1.2.2",
     "bulma": "^0.6.2",
     "bulma-tooltip": "^1.0.3",
     "core-js": "^2.4.1",
