@@ -3,7 +3,7 @@ import { FormControl, Validators } from '@angular/forms';
 
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
-import { zip, map, startWith, filter, debounceTime, merge, withLatestFrom } from 'rxjs/operators';
+import { zip, map, startWith, filter, debounceTime, merge, switchMap, withLatestFrom } from 'rxjs/operators';
 
 import { environment } from '../../../../environments/environment';
 import { GenerateTweetService } from '../../services/generate-tweet/generate-tweet.service';
@@ -48,7 +48,7 @@ export class GenerateComponent implements OnInit {
         filter((beginningOfTweetValueValidity: ValueValidity) => beginningOfTweetValueValidity.isValid),
         map((beginningOfTweetValueValidity: ValueValidity) => beginningOfTweetValueValidity.value),
         filter((beginningOfTweetValue: string) => (beginningOfTweetValue.length > 0)),
-        debounceTime(750)
+        debounceTime(800)
       );
 
     const generateTweetDueToRegenerate$: Observable<string> = this.regenerateTweet$.pipe(
@@ -60,28 +60,27 @@ export class GenerateComponent implements OnInit {
     );
 
     generateTweetDueToTextInput$.pipe(
-        merge(generateTweetDueToRegenerate$)
-      )
-      .subscribe(
-        (beginningOfTweet: string) => {
+        merge(generateTweetDueToRegenerate$),
+        switchMap((beginningOfTweet: string) => {
           this.isLoading = true;
           this.errorMessage = undefined;
-          this.generateTweetService.loadGeneratedTweet(beginningOfTweet).subscribe(
-            (generateTweetResponse: GenerateTweetResponse) => {
-              this.isLoading = false;
-              generateTweetResponse.number_of_replies = this.getRandomNumber();
-              generateTweetResponse.number_of_retweets = this.getRandomNumber();
-              generateTweetResponse.number_of_likes = this.getRandomNumber();
-              this.generatedTweets.unshift(generateTweetResponse);
-            },
-            (error: any) => {
-              this.isLoading = false;
-              this.errorMessage = error.statusText;
-              if (error.error.description) {
-                this.errorMessage += ' (' + error.error.description + ')';
-              }
-            }
-          );
+          return this.generateTweetService.loadGeneratedTweet(beginningOfTweet);
+        })
+      )
+      .subscribe(
+        (generateTweetResponse: GenerateTweetResponse) => {
+          this.isLoading = false;
+          generateTweetResponse.number_of_replies = this.getRandomNumber();
+          generateTweetResponse.number_of_retweets = this.getRandomNumber();
+          generateTweetResponse.number_of_likes = this.getRandomNumber();
+          this.generatedTweets.unshift(generateTweetResponse);
+        },
+        (error: any) => {
+          this.isLoading = false;
+          this.errorMessage = error.statusText;
+          if (error.error.description) {
+            this.errorMessage += ' (' + error.error.description + ')';
+          }
         }
       );
 
