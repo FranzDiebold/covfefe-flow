@@ -40,7 +40,7 @@
 
 
 ## :speech_balloon: Chatbot
-- [ ] TODO
+:fast_forward: [Chatbot](./chatbot) - Chatbot for fake tweet creation
 
 
 

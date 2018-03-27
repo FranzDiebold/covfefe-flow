@@ -35,7 +35,7 @@ In `src/environments/environment.[prod].ts` you may change the `apiEndpoint` of 
 export const environment = {
   ...,
   apiEndpoint: 'https://api.covfefe-flow.ml',
-  beginningOfTweetMaxLength: 40,
+  beginningOfTweetMaxLength: 50,
   twitterUsername: 'covfefeflow'
 };
 ```

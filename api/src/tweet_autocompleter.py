@@ -1,7 +1,6 @@
-import numpy as np
 from predict_client.prod_client import ProdClient
 
-from util import get_vocabulary_and_dictionaries, sample
+from util import get_vocabulary_and_dictionaries, vectorize_sentences, sample
 
 
 IN_TENSOR_NAME = 'inputs'
@@ -33,9 +32,7 @@ class TweetAutocompleter(object):
         return complete_tweet
 
     def _predict_next_char(self, input_sentence: str, temperature: float) -> str:
-        input_data = np.zeros((1, self.max_input_len, self.vocabulary_size))
-        for t, char in enumerate(input_sentence):
-            input_data[0, t, self.char_to_id[char]] = 1.0
+        input_data = vectorize_sentences([input_sentence], self.max_input_len, self.vocabulary_size, self.char_to_id)
         request_data = [{
             'in_tensor_name': IN_TENSOR_NAME,
             'in_tensor_dtype': IN_TENSOR_DTYPE,
