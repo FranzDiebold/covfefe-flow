@@ -39,10 +39,12 @@ services:
     depends_on:
       - api
 
-  #chatbot:
-  #  build: ./chatbot
-  #  depends_on:
-  #    - api
+  chatbot:
+    build: ./chatbot
+    depends_on:
+      - api
+    env_file:
+      - environment-variables.env
 
   letsencrypt-certbot:
     image: "certbot/certbot:latest"
@@ -51,7 +53,7 @@ services:
       - "443:443"
     volumes:
       - "certificates_data:/etc/letsencrypt/"
-    command: "certonly -n --standalone -m covfefe.flow@gmail.com --agree-tos --no-eff-email -d covfefe-flow.ml -d www.covfefe-flow.ml -d api.covfefe-flow.ml"
+    command: "certonly -n --standalone -m covfefe.flow@gmail.com --agree-tos --no-eff-email -d covfefe-flow.ml -d www.covfefe-flow.ml -d api.covfefe-flow.ml -d chatbot.covfefe-flow.ml"
 
 volumes:
   tweets_data:

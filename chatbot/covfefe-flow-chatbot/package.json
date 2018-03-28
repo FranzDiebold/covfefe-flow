@@ -1,0 +1,24 @@
+{
+  "name": "covfefe-flow-chatbot",
+  "version": "0.0.1",
+  "description": "chatbot for covfefe-flow",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FranzDiebold/covfefe-flow.git"
+  },
+  "author": "Franz Diebold",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FranzDiebold/covfefe-flow/issues"
+  },
+  "homepage": "https://github.com/FranzDiebold/covfefe-flow#readme",
+  "dependencies": {
+    "restify": "^7.1.0",
+    "restify-clients": "^2.0.1",
+    "restify-errors": "^6.0.0"
+  }
+}
