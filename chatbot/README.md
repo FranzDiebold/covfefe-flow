@@ -8,7 +8,7 @@
 
 covfefe-flow chatbot is the backend API for the **chatbot** for the covfefe-flow app. It is a [Node.js](https://nodejs.org) app using the following packages:
 - [restify](https://github.com/restify/node-restify) for providing the RESTful interface.
-- [restify-clients](https://github.com/restify/clients) for making requests to the covfefe-fow [generateTweet API](../api).
+- [restify-clients](https://github.com/restify/clients) for making requests to the covfefe-flow [generateTweet API](../api).
 - [restify-errors](https://github.com/restify/errors) for handling HTTP errors.
 
 For handling the natural language processing (NLP) and the connections to the numerous chat services ([Facebook Messenger](https://www.messenger.com), [Slack](https://slack.com), [Telegram](https://telegram.org), [Skype](https://www.skype.com)) the [Dialogflow](https://dialogflow.com) platform is used.
