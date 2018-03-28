@@ -21,7 +21,7 @@ The exported Dialogflow agent `covfefe-flow` can be found in [/dialogflow-agent]
 
 ### Intents, Actions & Parameters
 The following intents, [actions and parameters](https://dialogflow.com/docs/actions-and-parameters) are defined in Dialogflow:
-- `Default Fallback Intent` with the `generate-tweet` action for fake tweet generation. No parameters are used since the complete message is used as beginning of the tweet.
+- `Default Fallback Intent` with the `generate-tweet` action for fake tweet generation. No parameters are used since the complete message (`queryText`) is used as beginning of the tweet.
 
 
 
