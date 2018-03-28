@@ -2,6 +2,8 @@
 
 # :speech_balloon: Chatbot
 
+<a href="http://t.me/covfefeflow_bot" target="_blank"><img src="https://img.shields.io/badge/chat-Telegram-32afed.svg" alt="chat: Telegram"></a>
+<a href="https://bot.dialogflow.com/covfefe-flow" target="_blank"><img src="https://img.shields.io/badge/chat-Web-ed6c1f.svg" alt="chat: Web"></a>
 [![license: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](./LICENSE.md)
 
 covfefe-flow chatbot is the backend API for the **chatbot** for the covfefe-flow app. It is a [Node.js](https://nodejs.org) app using the following packages:
@@ -19,7 +21,7 @@ The exported Dialogflow agent `covfefe-flow` can be found in [/dialogflow-agent]
 
 ### Intents, Actions & Parameters
 The following intents, [actions and parameters](https://dialogflow.com/docs/actions-and-parameters) are defined in Dialogflow:
-- `Default Fallback Intent` with the `generate-tweet` action for fake tweet generation
+- `Default Fallback Intent` with the `generate-tweet` action for fake tweet generation. No parameters are used since the complete message is used as beginning of the tweet.
 
 
 
