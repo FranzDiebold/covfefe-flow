@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source aws_config.txt
+source deployment/aws_config.txt
 
 echo ""
 echo "****************************************"
