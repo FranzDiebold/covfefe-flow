@@ -1,6 +1,6 @@
 ### STAGE 1: Build ###
 
-FROM node:9.8-alpine as builder
+FROM node:10.13.0-alpine as builder
 
 COPY covfefe-flow/package.json ./
 
@@ -16,7 +16,7 @@ RUN $(npm bin)/ng build --prod
 
 ### STAGE 2: Setup ###
 
-FROM nginx:1.13.9-alpine
+FROM nginx:1.15.6-alpine
 
 RUN rm -f /etc/nginx/sites-enabled/default
 COPY nginx.conf /etc/nginx/nginx.conf

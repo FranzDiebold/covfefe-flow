@@ -1,4 +1,4 @@
-FROM python:3.6.4-slim
+FROM python:3.7.1-slim
 
 # install git
 RUN apt-get update
