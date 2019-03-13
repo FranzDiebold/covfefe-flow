@@ -2,7 +2,7 @@
 
 # covfefe-flow
 
-[![demo: online](https://img.shields.io/badge/demo-online-009df4.svg)](https://www.covfefe-flow.ml)
+[![demo: online](https://img.shields.io/badge/demo-online-009df4.svg)](https://www.covfefe-flow.tk)
 [![license: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](./LICENSE.md)
 
 *covfefe-flow* is a @realDonaldTrump :triumph: fake tweet generator 🤖.

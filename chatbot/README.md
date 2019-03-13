@@ -32,7 +32,7 @@ In order to comply with the requirements of the Dialogflow [webhook](https://dia
 
 **[Request](https://dialogflow.com/docs/reference/api-v2/rest/v2beta1/WebhookRequest)**
 
-`POST` `https://chatbot.covfefe-flow.ml/`
+`POST` `https://chatbot.covfefe-flow.tk/`
 
 With the body:
 ```json

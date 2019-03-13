@@ -19,7 +19,7 @@
   },
   "defaultTimezone": "Europe/Madrid",
   "webhook": {
-    "url": "https://chatbot.covfefe-flow.ml",
+    "url": "https://chatbot.covfefe-flow.tk",
     "headers": {},
     "available": true,
     "useForDomains": false,

@@ -53,7 +53,7 @@ services:
       - "443:443"
     volumes:
       - "certificates_data:/etc/letsencrypt/"
-    command: "certonly -n --standalone -m covfefe.flow@gmail.com --agree-tos --no-eff-email -d covfefe-flow.ml -d www.covfefe-flow.ml -d api.covfefe-flow.ml -d chatbot.covfefe-flow.ml"
+    command: "certonly -n --standalone -m covfefe.flow@gmail.com --agree-tos --no-eff-email -d covfefe-flow.tk -d www.covfefe-flow.tk -d api.covfefe-flow.tk -d chatbot.covfefe-flow.tk"
 
 volumes:
   tweets_data:

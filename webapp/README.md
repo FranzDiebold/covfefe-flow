@@ -4,10 +4,10 @@
 # Webapp
 
 [![Angular: v5](https://img.shields.io/badge/Angular-v5-DD0031.svg)](./covfefe-flow/package.json)
-<a href="https://www.covfefe-flow.ml" target="_blank"><img src="https://img.shields.io/badge/demo-online-009df4.svg" alt="demo: online"></a>
+<a href="https://www.covfefe-flow.tk" target="_blank"><img src="https://img.shields.io/badge/demo-online-009df4.svg" alt="demo: online"></a>
 [![license: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](./covfefe-flow/LICENSE.md)
 
-> Check out the [live demo](https://www.covfefe-flow.ml)!
+> Check out the [live demo](https://www.covfefe-flow.tk)!
 
 [Angular v5](https://github.com/angular/angular) app using the [Bulma](https://github.com/jgthms/bulma) CSS framework.
 
@@ -34,7 +34,7 @@ In `src/environments/environment.[prod].ts` you may change the `apiEndpoint` of 
 ```typescript
 export const environment = {
   ...,
-  apiEndpoint: 'https://api.covfefe-flow.ml',
+  apiEndpoint: 'https://api.covfefe-flow.tk',
   beginningOfTweetMaxLength: 50,
   twitterUsername: 'covfefeflow'
 };
