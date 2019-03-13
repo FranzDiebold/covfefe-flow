@@ -1,13 +1,13 @@
 <img src="../design/logo/covfefe-flow-logo.png" alt="covfefe-flow logo" style="max-width:100%;" width="400px" height="70px">
 
-# :computer: API
+# API
 
 [![Python: v3.6.4](https://img.shields.io/badge/Python-v3.6.4-%234584b6.svg)](./Dockerfile)
 
 JSON-API for generating fake tweets using the Python web API framework [Falcon](https://github.com/falconry/falcon).
 
 
-## :dart: API endpoints
+## API endpoints
 
 ### generate
 Generate a fake tweet with a given beginning.
@@ -31,6 +31,6 @@ Generate a fake tweet with a given beginning.
 
 
 
-## :rocket: Deployment
+## Deployment
 The app is deployed using Docker ([Dockerfile](./Dockerfile)).
 The Falcon application is running in a [Gunicorn WSGI server](https://github.com/benoitc/gunicorn) in a Docker container named `api`.

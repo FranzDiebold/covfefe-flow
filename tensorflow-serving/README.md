@@ -11,5 +11,5 @@ The models are stored in the [`models`](./models/) folder.
 
 
 
-## :rocket: Deployment
+## Deployment
 For the sake of simplicity the prebuilt [epigramai/model-server](https://hub.docker.com/r/epigramai/model-server/) Docker image is used, see the [Dockerfile](./Dockerfile).

@@ -1,6 +1,6 @@
 <img src="../design/logo/covfefe-flow-logo.png" alt="covfefe-flow logo" style="max-width:100%;" width="400px" height="70px">
 
-# :speech_balloon: Chatbot
+# Chatbot
 
 <a href="http://t.me/covfefeflow_bot" target="_blank"><img src="https://img.shields.io/badge/chat-Telegram-32afed.svg" alt="chat: Telegram"></a>
 <a href="https://bot.dialogflow.com/covfefe-flow" target="_blank"><img src="https://img.shields.io/badge/chat-Web-ed6c1f.svg" alt="chat: Web"></a>
@@ -25,7 +25,7 @@ The following intents, [actions and parameters](https://dialogflow.com/docs/acti
 
 
 
-## :dart: API endpoint
+## API endpoint
 In order to comply with the requirements of the Dialogflow [webhook](https://dialogflow.com/docs/fulfillment) (v2) the following API endpoint is defined:
 
 ### webhook
@@ -69,7 +69,7 @@ With the body:
 
 
 
-## 🎛 Configuration
+## Configuration
 In [`src/config.js`](./covfefe-flow-chatbot/src/config.js) you may change the `apiHost` of the corresponding backend:
 ```js
 config.apiHost = 'http://api:8000';
@@ -78,5 +78,5 @@ Please keep in mind that the API host is reachable within the Docker host.
 
 
 
-## :rocket: Deployment
+## Deployment
 The app is deployed using Docker ([Dockerfile](./Dockerfile)).

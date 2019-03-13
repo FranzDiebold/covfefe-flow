@@ -19,7 +19,7 @@
 
 
 
-## :running: Train
+## Train
 :fast_forward: [Train](./train) - Train the recurrent neural net (RNN)
 
 
@@ -29,27 +29,27 @@
 
 
 
-## :computer: API
+## API
 :fast_forward: [API](./api) - JSON-API for fake tweet creation
 
 
 
-## :iphone: Webapp
+## Webapp
 :fast_forward: [Webapp](./webapp) - Angular webapp for fake tweet creation
 
 
 
-## :speech_balloon: Chatbot
+## Chatbot
 :fast_forward: [Chatbot](./chatbot) - Chatbot for fake tweet creation
 
 
 
-## :house: Architecture & :rocket: Deployment
+## Architecture & Deployment
 <img src="./deployment/images/readme/covfefe-flow_architecture.jpg" width="40%" style="max-width:100%;" alt="covfefe-flow architecture">
 
 :fast_forward: [Architecture & Deployment](./deployment) - Architecture and deployment scripts
 
 
 
-## :art: Design
+## Design
 :fast_forward: [Design](./design) - Colors and logo

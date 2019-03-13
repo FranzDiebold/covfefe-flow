@@ -1,19 +1,19 @@
 <img src="../design/logo/covfefe-flow-logo.png" alt="covfefe-flow logo" style="max-width:100%;" width="400px" height="70px">
 
-# :hatching_chick: GetTweets
+# GetTweets
 
 Get [@realDonaldTrump](https://twitter.com/realdonaldtrump) Tweets for training the neural net.
 
 
 ## Possible sources:
 
-### :bird: [Twitter API](https://developer.twitter.com/en/docs)
+### [Twitter API](https://developer.twitter.com/en/docs)
 The [Twitter API](https://developer.twitter.com/en/docs) is a great way to get the most recent Tweets of user via the [statuses/user_timeline](https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline.html) endpoint.
 However, it can only return up to 3,200 of a user’s most recent Tweets.
 Since @realDonaldTrump has more than 30,000 Tweets this method is not suitable :weary:.
 
 
-### :scroll: [trumptwitterarchive.com](http://www.trumptwitterarchive.com/archive)
+### [trumptwitterarchive.com](http://www.trumptwitterarchive.com/archive)
 
 ![trumptwitterarchive.com screenshot](./images/readme/trumptwitterarchive.com_screenshot.jpg)
 

@@ -1,7 +1,7 @@
 <img src="../design/logo/covfefe-flow-logo.png" alt="covfefe-flow logo" style="max-width:100%;" width="400px" height="70px">
 
 
-# :iphone: Webapp
+# Webapp
 
 [![Angular: v5](https://img.shields.io/badge/Angular-v5-DD0031.svg)](./covfefe-flow/package.json)
 <a href="https://www.covfefe-flow.ml" target="_blank"><img src="https://img.shields.io/badge/demo-online-009df4.svg" alt="demo: online"></a>
@@ -29,7 +29,7 @@ User-centric description of the covfefe-flow project.
 
 
 
-## 🎛 Configuration
+## Configuration
 In `src/environments/environment.[prod].ts` you may change the `apiEndpoint` of the corresponding backend, the `beginningOfTweetMaxLength` and the `twitterUsername`:
 ```typescript
 export const environment = {
@@ -52,7 +52,7 @@ $color-error: $color-tertiary;
 
 
 
-## :pray: Tests
+## Tests
 For running the tests:
 ```bash
 npm install
@@ -74,12 +74,12 @@ Your app is then running at [`http://localhost:4200`](http://localhost:4200).
 
 
 
-## :rocket: Deployment
+## Deployment
 The covfefe-flow client Angular app is built and served using the [multi-stage build](https://docs.docker.com/engine/userguide/eng-image/multistage-build/) Docker feature. Check out the respective [Dockerfile](./Dockerfile):
 1. For building the Angular app (stage 1) via `npm run build-prod-i18n` a Node.js Alpine Docker image is used.
 2. For serving the app (stage 2) a [nginx](https://nginx.org) webserver is employed. The nginx configuration can be found in [`nginx.conf`](./nginx.conf).
 
 
 
-## :ballot_box_with_check: TODOs
+## TODOs
 - [ ] None (Enjoy your day!)
