@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/FranzDiebold/covfefe-flow#readme",
   "dependencies": {
-    "restify": "^7.2.2",
-    "restify-clients": "^2.6.3",
-    "restify-errors": "^6.1.1"
+    "restify": "^8.5.1",
+    "restify-clients": "^2.6.8",
+    "restify-errors": "^8.0.2"
   }
 }
