@@ -5,16 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: 'app/covfefe-flow/covfefe-flow.module#CovfefeFlowModule'
+    loadChildren: () => import('./covfefe-flow/covfefe-flow.module').then(m => m.CovfefeFlowModule)
   }
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes)
-  ],
-  exports: [
-    RouterModule
-  ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

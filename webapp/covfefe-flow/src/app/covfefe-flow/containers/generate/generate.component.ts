@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 
-import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
-import { zip, map, startWith, filter, debounceTime, merge, switchMap, withLatestFrom } from 'rxjs/operators';
+import { Observable, Subject, zip, merge } from 'rxjs';
+import { map, filter, debounceTime, switchMap, withLatestFrom } from 'rxjs/operators';
 
 import { environment } from '../../../../environments/environment';
 import { GenerateTweetService } from '../../services/generate-tweet/generate-tweet.service';
@@ -34,12 +33,11 @@ export class GenerateComponent implements OnInit {
     const beginningOfTweetIsValid$: Observable<boolean> = this.beginningOfTweet.statusChanges.pipe(
         map((status: string) => status === 'VALID')
       );
-    const beginningOfTweetChanges$: Observable<ValueValidity> = beginningOfTweetValue$.pipe(
-        zip(beginningOfTweetIsValid$),
+    const beginningOfTweetChanges$: Observable<ValueValidity> = zip(beginningOfTweetValue$, beginningOfTweetIsValid$).pipe(
         map(([value, isValid]) => {
           return {
-            value: value,
-            isValid: isValid
+            value,
+            isValid
           };
         })
       );
@@ -59,8 +57,7 @@ export class GenerateComponent implements OnInit {
       map((beginningOfTweetValue: string) => beginningOfTweetValue)
     );
 
-    generateTweetDueToTextInput$.pipe(
-        merge(generateTweetDueToRegenerate$),
+    merge(generateTweetDueToTextInput$, generateTweetDueToRegenerate$).pipe(
         switchMap((beginningOfTweet: string) => {
           this.isLoading = true;
           this.errorMessage = undefined;
