@@ -1,7 +1,12 @@
 {
   "name": "covfefe-flow",
   "version": "1.0.0",
+  "description": "covfefe-flow is a @realDonaldTrump 😤 fake tweet generator 🤖.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FranzDiebold/covfefe-flow.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
