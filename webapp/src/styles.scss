@@ -1,0 +1,40 @@
+@import "./variables";
+
+.fill-to-full-height {
+    min-height: calc(100vh - 3.25rem - 3.5rem);
+}
+
+.loader {
+    $loader-size: 2rem;
+    height: $loader-size;
+    width: $loader-size;
+    border-width: 3px;
+    border-left-color: $color-primary;
+    border-bottom-color: $color-secondary;
+}
+
+div.subsection {
+    margin: 2rem 0;
+    padding: 0;
+
+    h3.subtitle {
+        margin-bottom: 0;
+    }
+}
+
+.underline {
+    background-image: linear-gradient(to right, $color-primary, $color-secondary);
+    background-repeat: no-repeat;
+    background-size: 100% 0.17em;
+    background-position: 0 87%;
+}
+
+p {
+    text-align: justify;
+}
+
+.content figure {
+    @include mobile {
+        margin: 0;
+    }
+}

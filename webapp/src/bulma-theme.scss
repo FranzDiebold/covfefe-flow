@@ -1,0 +1,25 @@
+@import "./variables";
+
+@import "~bulma/sass/utilities/initial-variables";
+
+$primary: $color-primary;
+$text: $color-gray;
+$link: mix($color-primary, $color-gray, 65%);
+$link-hover: $color-primary;
+
+@import "~bulma/sass/utilities/_all";
+@import "~bulma/sass/base/_all";
+@import "~bulma/sass/helpers/typography";
+@import "~bulma/sass/helpers/visibility";
+
+@import "~bulma/sass/components/navbar";
+@import "~bulma/sass/elements/button";
+@import "~bulma/sass/elements/container";
+@import "~bulma/sass/elements/content";
+@import "~bulma/sass/elements/title";
+@import "~bulma/sass/elements/notification";
+@import "~bulma/sass/elements/other";
+@import "~bulma/sass/grid/columns";
+@import "~bulma/sass/layout/hero";
+
+@import "~bulma-tooltip/src/sass/index";

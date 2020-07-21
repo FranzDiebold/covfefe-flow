@@ -5,7 +5,7 @@
 [![demo: online](https://img.shields.io/badge/demo-online-009df4.svg)](https://www.covfefe-flow.tk)
 [![license: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](./LICENSE.md)
 
-*covfefe-flow* is a @realDonaldTrump :triumph: fake tweet generator/autocompleter 🤖.
+*covfefe-flow* is a @realDonaldTrump :triumph: fake tweet autocompleter 🤖.
 
 <img src="./images/readme/cofveve-tweet_screenshot.jpg" style="max-width:100%;" width="450px" height="216px" alt="covfefe tweet screenshot">
 [original (deleted) tweet](https://archive.is/f7UL3)
