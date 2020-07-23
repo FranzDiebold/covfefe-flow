@@ -2,6 +2,7 @@
 
 # covfefe-flow
 
+[![version: 1.0](https://img.shields.io/badge/version-1.0-00f457)](https://github.com/FranzDiebold/covfefe-flow/releases/tag/v1.0)
 [![demo: online](https://img.shields.io/badge/demo-online-009df4.svg)](https://www.covfefe-flow.tk)
 [![license: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](./LICENSE.md)
 
@@ -12,44 +13,39 @@
 
 > Despite the constant negative press covfefe
 
+## *This is version 1 of covfefe-flow!*
 
+*This version uses TensorFlow v1 and may be deployed to dockerized services in an AWS EC2 instance using the deployment scripts.*
 
 ## Get Tweets
-:fast_forward: [Get Tweets](./get-tweets) - Get @realDonaldTrump tweets for training
 
-
+[Get Tweets](./get-tweets) - Get @realDonaldTrump tweets for training
 
 ## Train
-:fast_forward: [Train](./train) - Train the recurrent neural net (RNN)
 
-
+[Train](./train) - Train the recurrent neural net (RNN)
 
 ## TensorFlow Serving
-:fast_forward: [TensorFlow Serving](./tensorflow-serving) - Deploy and serve the RNN model
 
-
+[TensorFlow Serving](./tensorflow-serving) - Deploy and serve the RNN model
 
 ## API
-:fast_forward: [API](./api) - JSON-API for fake tweet creation
 
-
+[API](./api) - JSON-API for fake tweet creation
 
 ## Webapp
-:fast_forward: [Webapp](./webapp) - Angular webapp for fake tweet creation
 
-
+[Webapp](./webapp) - Angular webapp for fake tweet creation
 
 ## Chatbot
-:fast_forward: [Chatbot](./chatbot) - Chatbot for fake tweet creation
 
-
+[Chatbot](./chatbot) - Chatbot for fake tweet creation
 
 ## Architecture & Deployment
+
 <img src="./deployment/images/readme/covfefe-flow_architecture.jpg" width="40%" style="max-width:100%;" alt="covfefe-flow architecture">
 
-:fast_forward: [Architecture & Deployment](./deployment) - Architecture and deployment scripts
-
-
+[Architecture & Deployment](./deployment) - Architecture and deployment scripts
 
 ## Design
-:fast_forward: [Design](./design) - Colors and logo
+[Design](./design) - Colors and logo
