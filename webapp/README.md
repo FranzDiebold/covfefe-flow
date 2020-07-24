@@ -2,6 +2,7 @@
 
 # Webapp
 
+[![CI/CD status badge](https://github.com/FranzDiebold/covfefe-flow/workflows/CI/CD/badge.svg)](https://github.com/FranzDiebold/covfefe-flow/actions?query=workflow%3ACI%2FCD)
 [![Angular: v10](https://img.shields.io/badge/Angular-v10-DD0031.svg)](package.json)
 <a href="https://www.covfefe-flow.tk" target="_blank"><img src="https://img.shields.io/badge/demo-online-009df4.svg" alt="demo: online"></a>
 [![license: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](../LICENSE)
@@ -19,7 +20,7 @@ Angular concepts/techniques used:
 
 ### generate
 
-The actual fake tweet creation view.
+The actual fake tweet autocompletion view.
 
 ### about
 
@@ -51,22 +52,26 @@ $color-light-gray: #d9d9da;
 $color-error: $color-tertiary;
 ```
 
+## Installation
+
+To install the dependencies:
+
+```bash
+make webapp-install
+```
+
 ## Tests
 
 For running the tests:
 
 ```bash
-npm install
-ng test
+make webapp-test
 ```
 
-Or just test the app locally:
-
-Serve app locally
+Or just test/serve the app locally:
 
 ```bash
-npm install
-ng serve
+make webapp-serve
 ```
 
 and run [Chrome](https://www.google.com/chrome/) in *disabled web security* mode (for enabling CORS) and in *incognito* mode (on macOS):
@@ -77,6 +82,18 @@ and run [Chrome](https://www.google.com/chrome/) in *disabled web security* mode
 
 Your app is then running on [`http://localhost:4200`](http://localhost:4200).
 
+## Linting
+
+To run [TSLint](https://github.com/palantir/tslint):
+
+```bash
+make webapp-lint
+```
+
 ## Deployment
 
-[ ] TODO
+To deploy to [GitHub Pages](https://pages.github.com/):
+
+```bash
+make webapp-deploy-to-ghpages
+```

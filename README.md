@@ -2,6 +2,7 @@
 
 # covfefe-flow
 
+[![CI/CD](https://github.com/FranzDiebold/covfefe-flow/workflows/CI/CD/badge.svg)](https://github.com/FranzDiebold/covfefe-flow/actions?query=workflow%3ACI%2FCD)
 [![version: 2.0](https://img.shields.io/badge/version-2.0-00f457)](https://github.com/FranzDiebold/covfefe-flow/releases/tag/v2.0)
 [![demo: online](https://img.shields.io/badge/demo-online-009df4.svg)](https://www.covfefe-flow.tk)
 [![license: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](./LICENSE.md)
@@ -19,11 +20,11 @@
 
 ## API
 
-[API](./api) - JSON-API for fake tweet creation
+[API](./api) - JSON-API for fake tweet autocompletion
 
 ## Webapp
 
-[Webapp](./webapp) - Angular webapp for fake tweet creation
+[Webapp](./webapp) - Angular webapp for fake tweet autocompletion
 
 ## Architecture & Deployment
 
