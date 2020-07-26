@@ -3,7 +3,7 @@ webapp-install:
 	cd webapp && npm install
 
 .PHONY: webapp-serve
-webapp-deploy:
+webapp-serve:
 	cd webapp && npm run start
 
 .PHONY: webapp-lint
