@@ -8,22 +8,20 @@
         font-weight: 300;
         letter-spacing: 2px;
         padding: .5rem .8rem;
-        border-width: 1px;
-        border-color: $color-light-gray;
         border-radius: 3px;
-        border-style: solid;
+        border: 0;
         max-width: 100%;
+        background-color: rgba($color-light-gray, 0.3);
 
         &::placeholder {
-            color: rgba($color-light-gray, 0.4);
+            color: rgba($color-gray, 0.4);
         }
 
-        &:hover,
         &:focus {
+          background-color: #ffffff;
             outline-color: transparent;
             outline-style: none;
             outline-width: 0;
-            border-color: transparent;
             box-shadow: 0 1px 6px 0 rgba($color-gray, 0.5);
         }
 
