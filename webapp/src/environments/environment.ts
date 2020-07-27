@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiEndpoint: 'http://192.168.99.100',
+  apiEndpoint: 'https://<region>-<project_name>.cloudfunctions.net/api',
   beginningOfTweetMaxLength: 50,
   twitterUsername: 'covfefeflow'
 };

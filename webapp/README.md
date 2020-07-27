@@ -35,7 +35,7 @@ In `src/environments/environment.[prod].ts` you may change the `apiEndpoint` of 
 ```typescript
 export const environment = {
   ...,
-  apiEndpoint: 'https://api.covfefe-flow.tk',
+  apiEndpoint: 'https://<region>-<project_name>.cloudfunctions.net/api',
   beginningOfTweetMaxLength: 50,
   twitterUsername: 'covfefeflow'
 };
