@@ -20,3 +20,16 @@ jobs:
       if: github.ref == 'refs/heads/primary'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  api:
+    name: API
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - run: make api-install-dev
+      - run: make api-lint

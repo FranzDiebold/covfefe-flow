@@ -1,10 +1,17 @@
+"""Utility functions."""
+
 import string
-from typing import List, Dict
+from typing import Tuple, List, Dict
+
 import numpy as np
 
 
-def get_vocabulary_and_dictionaries():
-    printable_chars = [char for char in string.printable if char not in ('\t', '\r', '\x0b', '\x0c')]
+def get_vocabulary_and_dictionaries() -> Tuple[List[str], Dict[str, int], Dict[int, str], int]:
+    """Get the vocabulary and
+    dictionaries for converting between characters and one-hot encoding."""
+    printable_chars = [
+        char for char in string.printable if char not in ('\t', '\r', '\x0b', '\x0c')
+    ]
     extra_chars = ['✅', '🏆', '📈', '📉', '🎥', '💰', '📸', '…']
     vocabulary = sorted(printable_chars + extra_chars)
     char_to_id = dict((char, i + 1) for i, char in enumerate(vocabulary))
@@ -16,15 +23,17 @@ def get_vocabulary_and_dictionaries():
 
 def vectorize_sentences(sentences: List[str], maxlen: int, vocabulary_size: int,
                         char_to_id: Dict[str, int]) -> np.ndarray:
+    """Vectorize a list of senctences using a one-hot encoding on character level."""
     vectorized_sentences = np.zeros((len(sentences), maxlen, vocabulary_size), dtype=np.bool)
     for i, sentence in enumerate(sentences):
         index_offset = maxlen - len(sentence)
-        for t, char in enumerate(sentence):
-            vectorized_sentences[i, index_offset + t, char_to_id[char]] = 1
+        for j, char in enumerate(sentence):
+            vectorized_sentences[i, index_offset + j, char_to_id[char]] = 1
     return vectorized_sentences
 
 
-def sample(input_predictions, temperature=1.0):
+def sample(input_predictions: np.ndarray, temperature=1.0) -> np.ndarray:
+    """Sample from a given `input_predictions` distribution."""
     predictions = np.asarray(input_predictions).astype('float64')
     exp_predictions = np.exp(np.log(predictions) / temperature)
     normalized_predictions = exp_predictions / np.sum(exp_predictions)

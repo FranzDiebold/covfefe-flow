@@ -21,3 +21,16 @@ webapp-test-ci:
 .PHONY: webapp-deploy-to-ghpages
 webapp-deploy-to-ghpages:
 	cd webapp && npm run deploy-to-ghpages
+
+.PHONY: api-install-dev
+api-install-dev:
+	cd api/src && pip install -r requirements-dev.txt
+
+.PHONY: api-install
+api-install:
+	cd api/src && pip install -r requirements.txt
+
+.PHONY: api-lint
+api-lint:
+	pylint --version
+	cd api/src && pylint *.py
