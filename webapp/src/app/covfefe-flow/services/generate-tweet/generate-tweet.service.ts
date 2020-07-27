@@ -9,19 +9,15 @@ import { GenerateTweetResponse } from './generate-tweet-response.model';
   providedIn: 'root'
 })
 export class GenerateTweetService {
-  private API_PATH = environment.apiEndpoint;
+  private API_PATH: string = environment.apiEndpoint;
 
   constructor(private httpClient: HttpClient) {}
 
   loadGeneratedTweet(beginningOfTweet: string): Observable<GenerateTweetResponse> {
-    const body: string = new HttpParams()
-      .set('beginning_of_tweet', beginningOfTweet)
-      .set('temperature', '0.9')
-      .toString();
-    const headers = new HttpHeaders()
-      .set('Content-Type', 'application/x-www-form-urlencoded');
-
-    return this.httpClient
-      .post<GenerateTweetResponse>(this.API_PATH, body, { headers });
+    const body = {
+      beginning_of_tweet: beginningOfTweet,
+      temperature: '0.9',
+    };
+    return this.httpClient.post<GenerateTweetResponse>(this.API_PATH, body);
   }
 }
