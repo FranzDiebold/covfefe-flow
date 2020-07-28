@@ -7,3 +7,7 @@
 The architecture and interplay of components and (external) services is illustrated in the following image:
 
 ![covfefe-flow architecture](./images/readme/covfefe-flow_architecture.jpg)
+
+### Makefile
+
+Use the [`Makefile`](../Makefile) to run common tasks. To see which commands are available run `make help`.
