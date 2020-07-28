@@ -38,9 +38,9 @@ def handle(request: Request) -> Tuple[Response, int, Dict[str, str]]:
     request_json = request.get_json() or {}
     print(f'POST request {request_json}.')
     try:
-        beginning_of_tweet = request_json['beginning_of_tweet']
+        beginning_of_tweet = request_json['beginningOfTweet']
     except KeyError:
-        return jsonify({'message': 'Parameter "beginning_of_tweet" missing.'}), 400, headers
+        return jsonify({'message': 'Parameter "beginningOfTweet" missing.'}), 400, headers
 
     try:
         temperature = float(request_json.get('temperature', DEFAULT_TEMPERATURE))
@@ -56,9 +56,9 @@ def handle(request: Request) -> Tuple[Response, int, Dict[str, str]]:
         return jsonify({'message': str(err)}), 400, headers
 
     response_body = {
-        'beginning_of_tweet': beginning_of_tweet,
+        'beginningOfTweet': beginning_of_tweet,
         'temperature': temperature,
-        'generated_tweet': generated_tweet,
+        'generatedTweet': generated_tweet,
         'timestamp': datetime.now().isoformat()
     }
 

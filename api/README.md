@@ -18,12 +18,12 @@ Autocomplete a fake tweet with a given beginning.
 
 `POST` with a JSON encoded body containing the following parameters:
 
-- `beginning_of_tweet`: The beginning of the tweet, up to 50 characters long.
+- `beginningOfTweet`: The beginning of the tweet, up to 50 characters long.
 - `temperature` (optional): Float value in the interval `(0.0, 1.2]` to control the randomness of predictions. The default value is `1.0`.
 
 ```json
 {
-  "beginning_of_tweet": "<Your_beginning_of_tweet_here>",
+  "beginningOfTweet": "<Your_beginning_of_tweet_here>",
   "temperature": "0.9"
 }
 ```
@@ -32,9 +32,9 @@ Autocomplete a fake tweet with a given beginning.
 
 ```json
 {
-    "beginning_of_tweet": "...",
+    "beginningOfTweet": "...",
     "temperature": "0.9",
-    "generated_tweet": "... ...",
+    "generatedTweet": "... ...",
     "timestamp": "2020-03-14T01:59:26.535897"
 }
 ```

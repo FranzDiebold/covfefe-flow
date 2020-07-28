@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiEndpoint: 'https://<region>-<project_name>.cloudfunctions.net/api',
+  apiEndpoint: 'https://<region>-<project_name>.cloudfunctions.net/autocomplete',
   beginningOfTweetMaxLength: 50,
   twitterUsername: 'covfefeflow'
 };

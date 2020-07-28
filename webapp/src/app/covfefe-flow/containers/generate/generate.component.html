@@ -37,11 +37,11 @@
         </div>
 
         <app-tweet *ngFor="let generatedTweet of generatedTweets"
-          [text]="generatedTweet.generated_tweet"
+          [text]="generatedTweet.generatedTweet"
           [timestamp]="generatedTweet.timestamp"
-          [numberOfReplies]="generatedTweet.number_of_replies"
-          [numberOfRetweets]="generatedTweet.number_of_retweets"
-          [numberOfLikes]="generatedTweet.number_of_likes"
+          [numberOfReplies]="generatedTweet.numberOfReplies"
+          [numberOfRetweets]="generatedTweet.numberOfRetweets"
+          [numberOfLikes]="generatedTweet.numberOfLikes"
           fullname="covfefe-flow"
           username="covfefeflow"></app-tweet>
       </div>

@@ -15,7 +15,7 @@ export class GenerateTweetService {
 
   loadGeneratedTweet(beginningOfTweet: string): Observable<GenerateTweetResponse> {
     const body = {
-      beginning_of_tweet: beginningOfTweet,
+      beginningOfTweet,
       temperature: '0.9',
     };
     return this.httpClient.post<GenerateTweetResponse>(this.API_PATH, body);

@@ -67,9 +67,9 @@ export class GenerateComponent implements OnInit {
       .subscribe(
         (generateTweetResponse: GenerateTweetResponse) => {
           this.isLoading = false;
-          generateTweetResponse.number_of_replies = this.getRandomNumber();
-          generateTweetResponse.number_of_retweets = this.getRandomNumber();
-          generateTweetResponse.number_of_likes = this.getRandomNumber();
+          generateTweetResponse.numberOfReplies = this.getRandomNumber();
+          generateTweetResponse.numberOfRetweets = this.getRandomNumber();
+          generateTweetResponse.numberOfLikes = this.getRandomNumber();
           this.generatedTweets.unshift(generateTweetResponse);
         },
         (error: any) => {

@@ -35,7 +35,7 @@ In `src/environments/environment.[prod].ts` you may change the `apiEndpoint` of 
 ```typescript
 export const environment = {
   ...,
-  apiEndpoint: 'https://<region>-<project_name>.cloudfunctions.net/api',
+  apiEndpoint: 'https://<region>-<project_name>.cloudfunctions.net/autocomplete',
   beginningOfTweetMaxLength: 50,
   twitterUsername: 'covfefeflow'
 };

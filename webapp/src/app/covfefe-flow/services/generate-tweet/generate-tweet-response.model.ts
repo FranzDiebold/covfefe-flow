@@ -1,9 +1,9 @@
 export interface GenerateTweetResponse {
-  beginning_of_tweet: string;
+  beginningOfTweet: string;
   temperature: number;
-  generated_tweet: string;
+  generatedTweet: string;
   timestamp: Date;
-  number_of_replies?: number;
-  number_of_retweets?: number;
-  number_of_likes?: number;
+  numberOfReplies?: number;
+  numberOfRetweets?: number;
+  numberOfLikes?: number;
 }
