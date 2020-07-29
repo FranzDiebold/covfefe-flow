@@ -1,0 +1,91 @@
+openapi: '3.0.3'
+info:
+  version: 2.0.0
+  title: covfefe-flow
+  description: covfefe-flow is a @realDonaldTrump 😤 fake tweet autocompleter 🤖
+  license:
+    name: MIT
+  contact:
+    name: Franz Diebold
+    url: https://www.diebold.io
+servers:
+  - url: https://<region>-<project_name>.cloudfunctions.net/autocomplete
+paths:
+  /autocomplete:
+    post:
+      summary: Autcomplete a given beginning of a tweet
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AutocompleteRequest'
+            examples:
+              autocomplete-request-without-temperature:
+                $ref: '#/components/examples/AutocompleteRequestWithoutTemperature'
+              autocomplete-request-with-temperature:
+                $ref: '#/components/examples/AutocompleteRequestWithTemperature'
+        required: true
+      responses:
+        '200':
+          description: The autocompleted tweet
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AutocompleteResponse'
+              examples:
+                autocomplete-response:
+                  $ref: '#/components/examples/AutocompleteResponse'
+components:
+  schemas:
+    AutocompleteRequest:
+      type: object
+      required:
+        - beginningOfTweet
+      properties:
+        beginningOfTweet:
+          type: string
+          maxLength: 50
+        temperature:
+          type: number
+          format: float
+          minimum: 0.0
+          maximum: 1.2
+          default: 1.0
+    AutocompleteResponse:
+      type: object
+      required:
+        - beginningOfTweet
+        - temperature
+        - generatedTweet
+        - timestamp
+      properties:
+        beginningOfTweet:
+          type: string
+          maxLength: 50
+        temperature:
+          type: number
+          format: float
+          minimum: 0.0
+          maximum: 1.2
+        generatedTweet:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+  examples:
+    AutocompleteRequestWithoutTemperature:
+      summary: autocomplete request without temperature
+      value:
+        beginningOfTweet: 'What I always wanted to say is '
+    AutocompleteRequestWithTemperature:
+      summary: autocomplete request with temperature
+      value:
+        beginningOfTweet: 'What I always wanted to say is '
+        temperature: 0.42
+    AutocompleteResponse:
+      summary: autocomplete response
+      value:
+        beginningOfTweet: 'What I always wanted to say is '
+        temperature: 0.42
+        generatedTweet: 'What I always wanted to say is that covfefe-flow is a pretty nice project. 🍦'
+        timestamp: '2020-03-14T01:59:26.535897'
