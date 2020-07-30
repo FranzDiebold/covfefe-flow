@@ -79,7 +79,7 @@ components:
           minimum: 0.0
           maximum: 1.2
           example: 0.42
-          autocompletedTweet:
+        autocompletedTweet:
           title: Autocompleted tweet
           description: The full autocompleted tweet, which begins with the given `beginningOfTweet`.
           type: string
