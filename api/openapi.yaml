@@ -1,8 +1,8 @@
 openapi: '3.0.3'
 info:
-  version: 2.0.0
   title: covfefe-flow
   description: covfefe-flow is a @realDonaldTrump 😤 fake tweet autocompleter 🤖
+  version: 2.0.0
   license:
     name: MIT
   contact:
@@ -43,14 +43,20 @@ components:
         - beginningOfTweet
       properties:
         beginningOfTweet:
+          title: Beginning of tweet
+          description: The beginning of the tweet that should be autocompleted.
           type: string
           maxLength: 50
+          example: 'What I always wanted to say is '
         temperature:
+          title: Temperature
+          description: The temperature is used to control the randomness of autocompletion. I higher temperature value increases the randomness.
           type: number
           format: float
           minimum: 0.0
           maximum: 1.2
           default: 1.0
+          example: 0.42
     AutocompleteResponse:
       type: object
       required:
@@ -60,18 +66,30 @@ components:
         - timestamp
       properties:
         beginningOfTweet:
+          title: Beginning of tweet
+          description: The beginning of the tweet that was used to autocomplete and was provided in the request.
           type: string
           maxLength: 50
+          example: 'What I always wanted to say is '
         temperature:
+          title: Temperature
+          description: The temperature that was used to autocomplete the tweet.
           type: number
           format: float
           minimum: 0.0
           maximum: 1.2
+          example: 0.42
         generatedTweet:
+          title: Autocompleted tweet
+          description: The full autocompleted tweet, which begins with the given `beginningOfTweet`.
           type: string
+          example: 'What I always wanted to say is that covfefe-flow is a pretty nice project. 🍦'
         timestamp:
+          title: Timestamp
+          description: Creation time of the autocompleted tweet.
           type: string
           format: date-time
+          example: '2020-03-14T01:59:26.535897'
   examples:
     AutocompleteRequestWithoutTemperature:
       summary: autocomplete request without temperature
