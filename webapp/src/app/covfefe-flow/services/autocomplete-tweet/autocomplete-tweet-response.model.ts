@@ -1,7 +1,7 @@
-export interface GenerateTweetResponse {
+export interface AutocompleteTweetResponse {
   beginningOfTweet: string;
   temperature: number;
-  generatedTweet: string;
+  autocompletedTweet: string;
   timestamp: Date;
   numberOfReplies?: number;
   numberOfRetweets?: number;

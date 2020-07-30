@@ -1,23 +1,23 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { environment } from '../../../../environments/environment';
-import { GenerateTweetResponse } from './generate-tweet-response.model';
+import { AutocompleteTweetResponse } from './autocomplete-tweet-response.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class GenerateTweetService {
+export class AutocompleteTweetService {
   private API_PATH: string = environment.apiEndpoint;
 
   constructor(private httpClient: HttpClient) {}
 
-  loadGeneratedTweet(beginningOfTweet: string): Observable<GenerateTweetResponse> {
+  autocompleteTweet(beginningOfTweet: string): Observable<AutocompleteTweetResponse> {
     const body = {
       beginningOfTweet,
       temperature: '0.9',
     };
-    return this.httpClient.post<GenerateTweetResponse>(this.API_PATH, body);
+    return this.httpClient.post<AutocompleteTweetResponse>(this.API_PATH, body);
   }
 }

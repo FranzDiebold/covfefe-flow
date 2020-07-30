@@ -62,7 +62,7 @@ components:
       required:
         - beginningOfTweet
         - temperature
-        - generatedTweet
+        - autocompletedTweet
         - timestamp
       properties:
         beginningOfTweet:
@@ -79,7 +79,7 @@ components:
           minimum: 0.0
           maximum: 1.2
           example: 0.42
-        generatedTweet:
+          autocompletedTweet:
           title: Autocompleted tweet
           description: The full autocompleted tweet, which begins with the given `beginningOfTweet`.
           type: string
@@ -105,5 +105,5 @@ components:
       value:
         beginningOfTweet: 'What I always wanted to say is '
         temperature: 0.42
-        generatedTweet: 'What I always wanted to say is that covfefe-flow is a pretty nice project. 🍦'
+        autocompletedTweet: 'What I always wanted to say is that covfefe-flow is a pretty nice project. 🍦'
         timestamp: '2020-03-14T01:59:26.535897'

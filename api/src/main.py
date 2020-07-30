@@ -51,14 +51,14 @@ def handle(request: Request) -> Tuple[Response, int, Dict[str, str]]:
         tweet_autocompleter = TweetAutocompleter(BEGINNING_OF_TWEET_MAX_LENGTH, MODEL_NAME)
 
     try:
-        generated_tweet = tweet_autocompleter.autocomplete(beginning_of_tweet, temperature)
+        autocompleted_tweet = tweet_autocompleter.autocomplete(beginning_of_tweet, temperature)
     except ValueError as err:
         return jsonify({'message': str(err)}), 400, headers
 
     response_body = {
         'beginningOfTweet': beginning_of_tweet,
         'temperature': temperature,
-        'generatedTweet': generated_tweet,
+        'autocompletedTweet': autocompleted_tweet,
         'timestamp': datetime.now().isoformat()
     }
 

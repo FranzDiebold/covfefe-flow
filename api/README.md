@@ -23,7 +23,7 @@ Autocomplete a fake tweet with a given beginning.
 
 ```json
 {
-  "beginningOfTweet": "<Your_beginning_of_tweet_here>",
+  "beginningOfTweet": "What I always wanted to say is ",
   "temperature": "0.9"
 }
 ```
@@ -32,9 +32,9 @@ Autocomplete a fake tweet with a given beginning.
 
 ```json
 {
-    "beginningOfTweet": "...",
+    "beginningOfTweet": "What I always wanted to say is ",
     "temperature": "0.9",
-    "generatedTweet": "... ...",
+    "autocompletedTweet": "What I always wanted to say is that covfefe-flow is a pretty nice project. 🍦",
     "timestamp": "2020-03-14T01:59:26.535897"
 }
 ```

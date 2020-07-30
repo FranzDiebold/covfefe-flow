@@ -18,7 +18,7 @@ Angular concepts/techniques used:
 
 ## Main components
 
-### generate
+### autocomplete
 
 The actual fake tweet autocompletion view.
 

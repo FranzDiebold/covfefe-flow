@@ -5,28 +5,28 @@ import { Observable, Subject, zip, merge } from 'rxjs';
 import { map, filter, debounceTime, switchMap, withLatestFrom } from 'rxjs/operators';
 
 import { environment } from '../../../../environments/environment';
-import { GenerateTweetService } from '../../services/generate-tweet/generate-tweet.service';
-import { GenerateTweetResponse } from '../../services/generate-tweet/generate-tweet-response.model';
+import { AutocompleteTweetService } from '../../services/autocomplete-tweet/autocomplete-tweet.service';
+import { AutocompleteTweetResponse } from '../../services/autocomplete-tweet/autocomplete-tweet-response.model';
 import { ValueValidity } from '../../util/value-validity.model';
 
 
 @Component({
-  selector: 'app-generate',
-  templateUrl: './generate.component.html',
-  styleUrls: ['./generate.component.scss']
+  selector: 'app-autocomplete',
+  templateUrl: './autocomplete.component.html',
+  styleUrls: ['./autocomplete.component.scss']
 })
-export class GenerateComponent implements OnInit {
+export class AutocompleteComponent implements OnInit {
   inputPattern = '0-9a-zA-Z!"#$%&\'()*+,-./:;<=>?@\[\\\]^_`{|}~ ✅🏆📈📉🎥💰📸…';
   beginningOfTweet: FormControl = new FormControl('', Validators.pattern(`[${this.inputPattern}]*`));
   beginningOfTweetMaxLength = environment.beginningOfTweetMaxLength;
 
-  regenerateTweet$: Subject<undefined> = new Subject<undefined>();
+  reAutocompleteTweet$: Subject<undefined> = new Subject<undefined>();
 
   isLoading = false;
-  generatedTweets: GenerateTweetResponse[] = [];
+  autocompletedTweets: AutocompleteTweetResponse[] = [];
   errorMessage: string;
 
-  constructor(private generateTweetService: GenerateTweetService) { }
+  constructor(private autocompleteTweetService: AutocompleteTweetService) { }
 
   ngOnInit(): void {
     const beginningOfTweetValue$: Observable<string> = this.beginningOfTweet.valueChanges;
@@ -42,14 +42,14 @@ export class GenerateComponent implements OnInit {
         })
       );
 
-    const generateTweetDueToTextInput$: Observable<string> = beginningOfTweetChanges$.pipe(
+    const autocompleteTweetDueToTextInput$: Observable<string> = beginningOfTweetChanges$.pipe(
         filter((beginningOfTweetValueValidity: ValueValidity) => beginningOfTweetValueValidity.isValid),
         map((beginningOfTweetValueValidity: ValueValidity) => beginningOfTweetValueValidity.value),
         filter((beginningOfTweetValue: string) => (beginningOfTweetValue.length > 0)),
         debounceTime(800)
       );
 
-    const generateTweetDueToRegenerate$: Observable<string> = this.regenerateTweet$.pipe(
+    const autocompleteTweetDueToReAutocomplete$: Observable<string> = this.reAutocompleteTweet$.pipe(
       withLatestFrom(beginningOfTweetChanges$),
       map(([_, beginningOfTweetValueValidity]) => beginningOfTweetValueValidity),
       filter((beginningOfTweetValueValidity: ValueValidity) => beginningOfTweetValueValidity.isValid),
@@ -57,20 +57,20 @@ export class GenerateComponent implements OnInit {
       map((beginningOfTweetValue: string) => beginningOfTweetValue)
     );
 
-    merge(generateTweetDueToTextInput$, generateTweetDueToRegenerate$).pipe(
+    merge(autocompleteTweetDueToTextInput$, autocompleteTweetDueToReAutocomplete$).pipe(
         switchMap((beginningOfTweet: string) => {
           this.isLoading = true;
           this.errorMessage = undefined;
-          return this.generateTweetService.loadGeneratedTweet(beginningOfTweet);
+          return this.autocompleteTweetService.autocompleteTweet(beginningOfTweet);
         })
       )
       .subscribe(
-        (generateTweetResponse: GenerateTweetResponse) => {
+        (autocompleteTweetResponse: AutocompleteTweetResponse) => {
           this.isLoading = false;
-          generateTweetResponse.numberOfReplies = this.getRandomNumber();
-          generateTweetResponse.numberOfRetweets = this.getRandomNumber();
-          generateTweetResponse.numberOfLikes = this.getRandomNumber();
-          this.generatedTweets.unshift(generateTweetResponse);
+          autocompleteTweetResponse.numberOfReplies = this.getRandomNumber();
+          autocompleteTweetResponse.numberOfRetweets = this.getRandomNumber();
+          autocompleteTweetResponse.numberOfLikes = this.getRandomNumber();
+          this.autocompletedTweets.unshift(autocompleteTweetResponse);
         },
         (error: any) => {
           this.isLoading = false;
@@ -91,8 +91,8 @@ export class GenerateComponent implements OnInit {
       });
   }
 
-  regenerateTweet(): void {
-    this.regenerateTweet$.next();
+  reAutocompleteTweet(): void {
+    this.reAutocompleteTweet$.next();
   }
 
   private getRandomNumber(): number {
