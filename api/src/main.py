@@ -48,7 +48,10 @@ def handle(request: Request) -> Tuple[Response, int, Dict[str, str]]:
         return jsonify({'message': 'Float value expected for "temperature".'}), 400, headers
 
     if tweet_autocompleter is None:
-        tweet_autocompleter = TweetAutocompleter(BEGINNING_OF_TWEET_MAX_LENGTH, MODEL_NAME)
+        try:
+            tweet_autocompleter = TweetAutocompleter(BEGINNING_OF_TWEET_MAX_LENGTH, MODEL_NAME)
+        except ValueError as err:
+            return jsonify({'message': str(err)}), 400, headers
 
     try:
         autocompleted_tweet = tweet_autocompleter.autocomplete(beginning_of_tweet, temperature)

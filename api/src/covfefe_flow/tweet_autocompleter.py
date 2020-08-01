@@ -4,7 +4,7 @@ import os
 from zipfile import ZipFile
 
 from tensorflow import keras
-from google.cloud import storage
+from google.cloud import storage, exceptions
 
 from .util import get_vocabulary_and_dictionaries, vectorize_sentences, sample
 
@@ -37,7 +37,10 @@ class TweetAutocompleter():
         model_zip_file_name = f'{model_name}.zip'
         model_zip_file_path = f'{BASE_FOLDER}/{model_zip_file_name}'
         blob_file = bucket.blob(model_zip_file_name)
-        blob_file.download_to_filename(model_zip_file_path)
+        try:
+            blob_file.download_to_filename(model_zip_file_path)
+        except exceptions.NotFound:
+            raise ValueError(f'Model "{model_name}" not found.')
         extracted_file_path = f'{BASE_FOLDER}/{model_name}'
         with ZipFile(model_zip_file_path, 'r') as model_zip_file:
             model_zip_file.extractall(extracted_file_path)
