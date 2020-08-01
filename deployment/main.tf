@@ -1,8 +1,8 @@
 # Global configurations
 provider "google" {
   credentials = file("account.json")
-  project = var.project_name
-  region  = var.region
+  project     = var.project_name
+  region      = var.region
 }
 
 # Google Storage Bucket
@@ -28,8 +28,8 @@ resource "google_storage_bucket" "model_bucket" {
 
 # Google Cloud Functions
 resource "google_cloudfunctions_function" "api_function" {
-  name                  = "api"
-  description           = "API"
+  name                  = "autocomplete"
+  description           = "Autocomplete API"
   runtime               = "python37"
 
   available_memory_mb   = 2048
@@ -43,4 +43,15 @@ resource "google_cloudfunctions_function" "api_function" {
   environment_variables = {
     MODEL_BUCKET_NAME   = google_storage_bucket.model_bucket.name
   }
+
+  timeouts {
+    create = "10m"
+  }
+}
+
+# IAM entry for all users to invoke the function
+resource "google_cloudfunctions_function_iam_member" "invoker" {
+  cloud_function = google_cloudfunctions_function.api_function.name
+  role           = "roles/cloudfunctions.invoker"
+  member         = "allUsers"
 }

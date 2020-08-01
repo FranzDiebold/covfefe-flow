@@ -12,12 +12,12 @@ gcloud projects create "$project_id" --name="$project_name"
 # Google IAM Service account
 gcloud iam service-accounts create "$service_account_id" --display-name="$service_account_id" --project="$project_id"
 roles=(
-    "roles/iam.serviceAccountUser"
-    "roles/storage.admin"
-    "roles/cloudfunctions.developer"
+    "iam.serviceAccountUser"
+    "storage.admin"
+    "cloudfunctions.admin"
 )
 for role in "${roles[@]}"; do
-    gcloud projects add-iam-policy-binding "$project_id" --member="serviceAccount:$service_account_email" --role="$role"
+    gcloud projects add-iam-policy-binding "$project_id" --member="serviceAccount:$service_account_email" --role="roles/$role"
 done
 gcloud iam service-accounts keys create --iam-account="$service_account_email" account.json
 
