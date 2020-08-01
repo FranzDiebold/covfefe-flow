@@ -4,7 +4,7 @@
 
 [![OpenAPI definition: available](https://img.shields.io/badge/OpenAPI%20definition-available-orange)](https://editor.swagger.io/?url=https://raw.githubusercontent.com/FranzDiebold/covfefe-flow/feat/covfefe-flow-v2/api/openapi.yaml)
 [![CI/CD status badge](https://github.com/FranzDiebold/covfefe-flow/workflows/CI/CD/badge.svg)](https://github.com/FranzDiebold/covfefe-flow/actions?query=workflow%3ACI%2FCD)
-![Python: v3.8](https://img.shields.io/badge/Python-v3.8-%234584b6.svg)
+![Python: v3.7](https://img.shields.io/badge/Python-v3.7-%234584b6.svg)
 [![license: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](../LICENSE)
 
 JSON API for autocompleting fake tweets using the Python web micro framework [Flask](https://github.com/pallets/flask/).

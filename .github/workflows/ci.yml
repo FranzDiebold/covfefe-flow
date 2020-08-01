@@ -30,6 +30,6 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-python@v2
         with:
-          python-version: 3.8
+          python-version: 3.7
       - run: make api-install-dev
       - run: make api-lint
