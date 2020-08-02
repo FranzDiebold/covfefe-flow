@@ -24,7 +24,7 @@ def get_vocabulary_and_dictionaries() -> Tuple[List[str], Dict[str, int], Dict[i
 def vectorize_sentences(sentences: List[str], maxlen: int, vocabulary_size: int,
                         char_to_id: Dict[str, int]) -> np.ndarray:
     """Vectorize a list of senctences using a one-hot encoding on character level."""
-    vectorized_sentences = np.zeros((len(sentences), maxlen, vocabulary_size), dtype=np.bool)
+    vectorized_sentences = np.zeros((len(sentences), maxlen, vocabulary_size), dtype=np.float32)
     for i, sentence in enumerate(sentences):
         index_offset = maxlen - len(sentence)
         for j, char in enumerate(sentence):
