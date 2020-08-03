@@ -55,3 +55,9 @@ resource "google_cloudfunctions_function_iam_member" "invoker" {
   role           = "roles/cloudfunctions.invoker"
   member         = "allUsers"
 }
+
+output "api_function_url" {
+  value       = "https://${var.region}-${var.project_name}.cloudfunctions.net/${google_cloudfunctions_function.api_function.name}"
+  description = "This endpoint URL must be set in 'webapp/src/environments/environment.prod.ts' as 'apiEndpoint'."
+  depends_on  = [google_cloudfunctions_function.api_function]
+}
