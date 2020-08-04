@@ -6,7 +6,7 @@
 
 The architecture and interplay of components and (external) services is illustrated in the following image:
 
-![covfefe-flow architecture](./images/readme/covfefe-flow_architecture.jpg)
+![covfefe-flow architecture](./images/readme/covfefe-flow_architecture.png)
 
 ## Deployment
 
@@ -37,7 +37,6 @@ For an easier deployment of the API, the *infrastructure as code* (IaC) software
 4. Build the infrastructure: `terraform apply` and confirm with `yes`. This step will output the endpoint URLs `slack_actions_function_url` and `slack_slash_commands_function_url` that you need to enter in the Slack API console.
 
 To destroy/delete the infrastructure: `terraform destroy` and confirm with `yes`
-
 
 ### Makefile
 
