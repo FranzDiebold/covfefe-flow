@@ -17,6 +17,7 @@ MODEL_NAME = os.environ.get('MODEL_NAME', 'covfefe-flow')
 tweet_autocompleter = None
 
 
+# pylint: disable=too-many-return-statements
 def handle(request: Request) -> Tuple[Response, int, Dict[str, str]]:
     """Handler for handling POST requests."""
     # pylint: disable=global-statement
