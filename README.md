@@ -27,8 +27,9 @@
 [Webapp](./webapp) - Angular webapp for fake tweet autocompletion
 
 ## Architecture & Deployment
-
-<img src="./deployment/images/readme/covfefe-flow_architecture.png" width="50%" style="max-width:100%;" alt="covfefe-flow architecture">
+<a href="./deployment">
+  <img src="./deployment/images/readme/covfefe-flow_architecture.png" width="50%" style="max-width:100%;" alt="covfefe-flow architecture">
+</a>
 
 [Architecture & Deployment](./deployment) - Architecture and deployment scripts
 
