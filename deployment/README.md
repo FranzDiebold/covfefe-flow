@@ -8,7 +8,7 @@ The architecture and interplay of components and (external) services is illustra
 
 ![covfefe-flow architecture](./images/readme/covfefe-flow_architecture.png)
 
-## Deployment
+## :rocket: Deployment
 
 ### API
 
