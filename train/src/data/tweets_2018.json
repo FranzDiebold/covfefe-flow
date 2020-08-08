@@ -1,15 +1,6 @@
 [
   {
     "source": "Twitter for iPhone",
-    "text": "HAPPY NEW YEAR! We are MAKING AMERICA GREAT AGAIN, and much faster than anyone thought possible!",
-    "created_at": "Sun Dec 31 23:43:04 +0000 2017",
-    "retweet_count": 35394,
-    "favorite_count": 156032,
-    "is_retweet": false,
-    "id_str": "947614110082043904"
-  },
-  {
-    "source": "Twitter for iPhone",
     "text": "The United States has foolishly given Pakistan more than 33 billion dollars in aid over the last 15 years, and they have given us nothing but lies &amp; deceit, thinking of our leaders as fools. They give safe haven to the terrorists we hunt in Afghanistan, with little help. No more!",
     "created_at": "Mon Jan 01 12:12:00 +0000 2018",
     "retweet_count": 101056,
@@ -27777,5 +27768,14 @@
     "favorite_count": 233299,
     "is_retweet": false,
     "id_str": "1079497288605683712"
+  },
+  {
+    "source": "Twitter for iPhone",
+    "text": "HAPPY NEW YEAR! https://t.co/bHoPDPQ7G6",
+    "created_at": "Mon Dec 31 23:53:06 +0000 2018",
+    "retweet_count": 32999,
+    "favorite_count": 132907,
+    "is_retweet": false,
+    "id_str": "1079888205351145472"
   }
 ]
