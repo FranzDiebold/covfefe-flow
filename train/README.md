@@ -2,6 +2,8 @@
 
 # Train
 
+![TensorFlow: v2.3](https://img.shields.io/badge/TensorFlow-v2.3-ff6f00)
+
 Build and train the recurrent neural network (RNN) using the machine learning framework [TensorFlow](https://www.tensorflow.org) and the Deep Learning library [Keras](https://keras.io).
 The Python visualization library [seaborn](https://seaborn.pydata.org) is used for visualization.
 
