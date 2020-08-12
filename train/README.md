@@ -4,8 +4,15 @@
 
 ![TensorFlow: v2.3](https://img.shields.io/badge/TensorFlow-v2.3-ff6f00)
 
-Build and train the recurrent neural network (RNN) using the machine learning framework [TensorFlow](https://www.tensorflow.org) and the Deep Learning library [Keras](https://keras.io).
-The Python visualization library [seaborn](https://seaborn.pydata.org) is used for visualization.
+Build and train the recurrent neural network (RNN) using the machine learning framework [TensorFlow](https://www.tensorflow.org).
+The RNN is **character based**, in order to stimulate [neologisms](https://en.wikipedia.org/wiki/Neologism) - just like *covfefe* :yum:.
+
+### Used TensorFlow features / libraries
+
+- [Keras](https://keras.io), the Python deep learning API on top of TensorFlow
+- [tf.data](https://www.tensorflow.org/guide/data), to build custom input pipelines
+- [TensorFlow Lite](https://www.tensorflow.org/lite) for fast inference
+- [seaborn](https://seaborn.pydata.org), the Python visualization library
 
 ## Data
 
