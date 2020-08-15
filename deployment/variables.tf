@@ -1,5 +1,10 @@
 variable "project_name" {
   default   = "covfefe-flow-<random_number>"
+
+  validation {
+    condition     = can(regex("^covfefe-flow-", var.project_name))
+    error_message = "The \"project_name\" value must start with \"covfefe-flow-\"."
+  }
 }
 
 variable "region" {

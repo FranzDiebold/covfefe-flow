@@ -2,6 +2,8 @@
 
 # :house: Architecture & :rocket: Deployment
 
+![Terraform: v0.13](https://img.shields.io/badge/Terraform-v0.13-623CE4)
+
 ## :house: Architecture
 
 The architecture and interplay of components and (external) services is illustrated in the following image:
