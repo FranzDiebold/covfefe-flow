@@ -2,7 +2,7 @@
 
 # :house: Architecture & :rocket: Deployment
 
-![Terraform: v0.13](https://img.shields.io/badge/Terraform-v0.13-623CE4)
+[![Terraform: v0.13](https://img.shields.io/badge/Terraform-v0.13-623CE4)](main.tf)
 
 ## :house: Architecture
 

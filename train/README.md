@@ -2,7 +2,7 @@
 
 # Train
 
-![TensorFlow: v2.3](https://img.shields.io/badge/TensorFlow-v2.3-ff6f00)
+[![TensorFlow: v2.3](https://img.shields.io/badge/TensorFlow-v2.3-ff6f00)](src/requirements.txt)
 
 Build and train the recurrent neural network (RNN) using the machine learning framework [TensorFlow](https://www.tensorflow.org).
 The RNN is **character based**, in order to stimulate [neologisms](https://en.wikipedia.org/wiki/Neologism) - just like *covfefe* :yum:.
