@@ -18,7 +18,7 @@ The logo font is `Avenir Next`.
 
 <img src="./logo/covfefe-flow-icon.png" alt="covfefe-flow icon"  style="max-width:100%;" width="250px" height="250px">
 
-## Preview image for social networks
+## Preview image for social media
 
 ![covfefe-flow preview image](./other/covfefe-flow-preview-image.jpg)
 
