@@ -1,0 +1,74 @@
+<div class="tweet">
+  <div class="tweet-header columns is-mobile">
+      <div class="column is-narrow">
+          <img src="assets/img/covfefe-flow-avatar.png" class="avatar">
+      </div>
+      <div class="column is-narrow">
+          <div class="fullname">
+              {{ fullname }}
+              <span class="has-tooltip-right" data-tooltip="Fake">
+                  <svg class="fake-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 236.424 236.424" enable-background="new 0 0 236.424 236.424"
+                      xml:space="preserve">
+                      <g id="sign">
+                          <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="37.5708" y1="38.9106" x2="198.8519" y2="200.1918">
+                              <stop  offset="0" style="stop-color:#009DF4"/>
+                              <stop  offset="1" style="stop-color:#00F457"/>
+                          </linearGradient>
+                          <path fill="url(#SVGID_1_)" d="M98.465,16.101c10.861-13.619,28.633-13.619,39.493,0c10.861,13.619,33.999,24.762,51.418,24.762
+                              s28.499,13.895,24.623,30.877c-3.876,16.982,1.838,42.019,12.699,55.638c10.861,13.619,6.906,30.945-8.788,38.503
+                              c-15.694,7.559-31.706,27.637-35.582,44.619c-3.877,16.981-19.889,24.692-35.582,17.135c-15.694-7.558-41.375-7.558-57.069,0
+                              c-15.694,7.558-31.706-0.153-35.582-17.135c-3.876-16.982-19.888-37.061-35.582-44.619c-15.694-7.558-19.648-24.884-8.788-38.503
+                              C20.586,113.758,26.3,88.721,22.424,71.739c-3.876-16.982,7.205-30.877,24.624-30.876C64.466,40.862,87.604,29.72,98.465,16.101z"
+                              />
+                          <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="37.5708" y1="38.9106" x2="198.8519" y2="200.1918">
+                              <stop  offset="0" style="stop-color:#009DF4"/>
+                              <stop  offset="1" style="stop-color:#00F457"/>
+                          </linearGradient>
+                          <path fill="url(#SVGID_2_)" d="M98.465,16.101c10.861-13.619,28.633-13.619,39.493,0c10.861,13.619,33.999,24.762,51.418,24.762
+                              s28.499,13.895,24.623,30.877c-3.876,16.982,1.838,42.019,12.699,55.638c10.861,13.619,6.906,30.945-8.788,38.503
+                              c-15.694,7.559-31.706,27.637-35.582,44.619c-3.877,16.981-19.889,24.692-35.582,17.135c-15.694-7.558-41.375-7.558-57.069,0
+                              c-15.694,7.558-31.706-0.153-35.582-17.135c-3.876-16.982-19.888-37.061-35.582-44.619c-15.694-7.558-19.648-24.884-8.788-38.503
+                              C20.586,113.758,26.3,88.721,22.424,71.739c-3.876-16.982,7.205-30.877,24.624-30.876C64.466,40.862,87.604,29.72,98.465,16.101z"
+                              />
+                      </g>
+                      <path id="cross" fill="#FFFFFF" d="M129.811,123.212l33.73-33.731c3.203-3.203,3.203-8.396,0-11.598
+                          c-3.203-3.203-8.396-3.203-11.598,0l-33.73,33.73l-33.731-33.73c-3.203-3.203-8.396-3.203-11.598,0
+                          c-3.203,3.203-3.203,8.396,0,11.598l33.73,33.731l-33.73,33.73c-3.203,3.203-3.203,8.396,0,11.598
+                          c1.601,1.602,3.7,2.402,5.799,2.402c2.099,0,4.198-0.801,5.799-2.402l33.731-33.73l33.73,33.73c1.602,1.602,3.7,2.402,5.799,2.402
+                          c2.099,0,4.198-0.801,5.799-2.402c3.203-3.203,3.203-8.396,0-11.598L129.811,123.212z"/>
+                  </svg>
+              </span>
+          </div>
+          <div class="username">@{{ username }}</div>
+      </div>
+      <div class="column has-text-right">
+          <a [href]="tweetLink" target="_blank" class="button is-rounded tweet-button">Tweet</a>
+      </div>
+  </div>
+  <div class="tweet-content" [innerHTML]="text | linky:{ newWindow: true, urls: true, email: false, phone: false, mention: 'twitter', hashtag: 'twitter' }">
+  </div>
+  <div class="tweet-info">
+      {{ timestamp | date:'h:mm a - d LLL yyyy' }}
+  </div>
+  <div class="tweet-actions">
+      <a class="reply">
+          <svg viewBox="0 0 24 24">
+              <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4A2,2 0 0,0 20,2M20,16H6L4,18V4H20" />
+          </svg>
+          {{ numberOfReplies | beautifyNumber }}
+      </a>
+      <a class="retweet">
+          <svg viewBox="0 0 24 24">
+              <path d="M6,5.75L10.25,10H7V16H13.5L15.5,18H7A2,2 0 0,1 5,16V10H1.75L6,5.75M18,18.25L13.75,14H17V8H10.5L8.5,6H17A2,2 0 0,1 19,8V14H22.25L18,18.25Z" />
+          </svg>
+          {{ numberOfRetweets | beautifyNumber }}
+      </a>
+      <a class="like">
+          <svg viewBox="0 0 24 24">
+              <path d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z" />
+          </svg>
+          {{ numberOfLikes | beautifyNumber }}
+      </a>
+  </div>
+</div>

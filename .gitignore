@@ -185,3 +185,12 @@ fabric.properties
 
 
 .idea/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.lock.info
+*.tfstate.backup
+
+deployment/account.json
+deployment/*.zip

@@ -2,23 +2,28 @@
 
 # Train
 
-Build and train the recurrent neural network (RNN) using the machine learning framework [TensorFlow](https://www.tensorflow.org) and the Python Deep Learning library [Keras](https://keras.io).
-The Python visualization library [seaborn](https://seaborn.pydata.org) is used for visualizing .
+[![TensorFlow: v2.3](https://img.shields.io/badge/TensorFlow-v2.3-ff6f00)](src/requirements.txt)
 
+Build and train the recurrent neural network (RNN) using the machine learning framework [TensorFlow](https://www.tensorflow.org).
+The RNN is **character based**, in order to stimulate [neologisms](https://en.wikipedia.org/wiki/Neologism) - just like *covfefe* :yum:.
 
-## Procedure
+### Used TensorFlow features / libraries
+
+- [Keras](https://keras.io), the Python deep learning API on top of TensorFlow
+- [tf.data](https://www.tensorflow.org/guide/data), to build custom input pipelines
+- [TensorFlow Lite](https://www.tensorflow.org/lite) for fast inference
+- [seaborn](https://seaborn.pydata.org), the Python visualization library
+
+## Data
+
+All @realDonaldTrump tweets can be downloaded at [trumptwitterarchive.com](http://www.trumptwitterarchive.com/archive).
+
+## Jupyter Notebook
+
+<a href="https://colab.research.google.com/github/FranzDiebold/covfefe-flow/blob/primary/train/src/train-covfefe-flow.ipynb" target="_blank">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
 
 The respective [Jupyter](http://jupyter.org) notebook with documentation can be found in
 
-:fast_forward: [src/train-covfefe-flow.ipynb](src/train-covfefe-flow.ipynb).
-
-
-
-## Deployment & Usage
-The official Python v3 [`tensorflow/tensorflow`](https://hub.docker.com/r/tensorflow/tensorflow/) Docker image is used (see [Dockerfile](./Dockerfile)), which runs [Jupyter](http://jupyter.org).
-
-After starting the Docker container the Jupyter Notebook is running at:
-
-[`http://192.168.99.100:8888/?token=<JUPYTER_TOKEN>`](http://192.168.99.100:8888/?token=<JUPYTER_TOKEN>)
-
-(assuming that your Docker machine is listening at `192.168.99.100`)
+[src/train-covfefe-flow.ipynb](src/train-covfefe-flow.ipynb).

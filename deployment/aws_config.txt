@@ -1,5 +1,0 @@
-SECURITY_GROUP=covfefe-flow-sec-group
-INSTANCE_NAME=covfefe-flow-aws
-INSTANCE_TYPE=t2.micro
-REGION=us-east-1
-ZONE=a
